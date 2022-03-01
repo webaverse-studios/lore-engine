@@ -180,4 +180,5 @@ Note that in order for a character to pick up an object, it must not be worn by 
 
 ```
 /action charactername#xxxxx jumps
+/action charactername#xxxxx leaves
 ```
