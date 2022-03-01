@@ -3,19 +3,30 @@
 const path = require('path');
 const fs = require('fs');
 
-const data = fs.readFileSync(path.join(__dirname, '../specification/webaverse-script.md'), 'utf8');
-const j = {
-  prompt: '',
-  completion: data,
-};
-
-const lines = [
-  j,
-];
+const objects = [
+  {
+    prompt: '',
+    path: path.join(__dirname, '../specification/webaverse-script.md'),
+  },
+].concat(
+  fs.readdirSync(path.join(__dirname, '../data/')).map(l => path.join(__dirname, '../data/', l))
+    .map(l => {
+      return {
+        prompt: '<!webaverse-script>\n\n',
+        path: l,
+      };
+    })
+);
 
 const ws = fs.createWriteStream(path.join(__dirname, '../fine-tune.json'));
-for (const line of lines) {
-  ws.write(JSON.stringify(line));
+for (const o of objects) {
+  const {prompt, path} = o;
+  const completion = fs.readFileSync(path, 'utf8');
+  const j = {
+    prompt,
+    completion,
+  };
+  ws.write(JSON.stringify(j));
   ws.write('\n');
 }
 ws.end();

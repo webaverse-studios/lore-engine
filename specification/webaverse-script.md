@@ -6,10 +6,11 @@ The contents are plaintext markdown, separated into sections. All sections are r
 
 # Start tag
 
-Each webaverse script must start with a start tag:
+Each webaverse script must start with a start tag, followed by \n\n:
 
 ```
 <!webaverse-script>
+
 ```
 
 Then come the sections, each one labeled as a markdown heading (# Heading).
@@ -83,9 +84,9 @@ Metadata:
 
 Metadata for objects can include any keys/values, and is used for context in AI generation.
 
-# Manuscript
+# Transcript
 
-The manuscript is the speech and actions of the characters in the scene.
+The transcript is the speech and actions of the characters in the scene.
 
 ### Example
 
@@ -150,7 +151,9 @@ Note that in order for a character to pick up an object, it must not be worn by 
 
 ```
 /character charactername#xxxxx attacks charactername2#yyyyy
+/character charactername#xxxxx attacks objectname#yyyyy
 /character charactername#xxxxx stops attacking charactername2#yyyyy
+/character charactername#xxxxx stops attacking objectname#yyyyy
 ```
 
 #### Miscellaneous
