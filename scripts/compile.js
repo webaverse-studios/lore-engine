@@ -6,13 +6,13 @@ const fs = require('fs');
 const objects = [
   {
     prompt: '',
-    path: path.join(__dirname, '../specification/webaverse-script.md'),
+    path: path.join(__dirname, '../specification/webaverse-lore-file.md'),
   },
 ].concat(
   fs.readdirSync(path.join(__dirname, '../data/')).map(l => path.join(__dirname, '../data/', l))
     .map(l => {
       return {
-        prompt: '<!webaverse-script>\n\n',
+        prompt: '',
         path: l,
       };
     })

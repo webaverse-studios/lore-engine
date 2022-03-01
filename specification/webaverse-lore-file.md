@@ -1,19 +1,19 @@
-Webaverse script technical specification
+# WEBAVERSE_LORE_FILE technical specification
 
 Webaverse script files let you specify the lore for a Webaverse scene. This includes the setting, characters, and interactive objects in the scene, as well as the full transcript of what happens in the scene.
 
-The contents of a webaverse script file are plaintext markdown, starting with a `<!webaverse-script>` tag, followed by several data sections. All sections are required.
+The contents of a webaverse script file are plaintext markdown, starting with the text `WEBAVERSE_LORE_FILE`, followed by several data sections. All sections are required.
 
-# Start tag
+# Magic header
 
-Each webaverse script must start with a start tag, followed by \n\n:
-
-```
-<!webaverse-script>
+Each webaverse script must start with the following text:
 
 ```
+WEBAVERSE_LORE_FILE
 
-Then come the sections, each one labeled as a markdown heading (# Heading).
+```
+
+This is followed by the lore file data sections. Each section is labeled as a markdown heading (# Heading).
 
 # Setting
 
