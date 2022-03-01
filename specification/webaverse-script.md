@@ -122,6 +122,7 @@ The allowed action types are:
 #### Emotes
 
 ```
+/character charactername#xxxxx emotes neutral
 /character charactername#xxxxx emotes angry
 /character charactername#xxxxx emotes fun
 /character charactername#xxxxx emotes joy
