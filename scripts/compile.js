@@ -18,7 +18,7 @@ const objects = [
     })
 );
 
-const ws = fs.createWriteStream(path.join(__dirname, '../fine-tune.json'));
+const ws = fs.createWriteStream(path.join(__dirname, '../lore.json'));
 for (const o of objects) {
   const {prompt, path} = o;
   const completion = fs.readFileSync(path, 'utf8');
