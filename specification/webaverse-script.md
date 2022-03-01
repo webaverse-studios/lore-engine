@@ -1,8 +1,8 @@
 Webaverse script technical specification
 
-The `<!webaverse-script>` tag lets you specify the lore for a Webaverse scene. This includes the setting, characters, and interactive objects in the scene, as well as the full transcript of what happens in the scene.
+Webaverse script files let you specify the lore for a Webaverse scene. This includes the setting, characters, and interactive objects in the scene, as well as the full transcript of what happens in the scene.
 
-The contents are plaintext markdown, separated into sections. All sections are required.
+The contents of a webaverse script file are plaintext markdown, starting with a `<!webaverse-script>` tag, followed by several data sections. All sections are required.
 
 # Start tag
 
@@ -86,7 +86,7 @@ Metadata for objects can include any keys/values, and is used for context in AI 
 
 # Transcript
 
-The transcript is the speech and actions of the characters in the scene.
+The transcript is the last thing in the file,  speech and actions of the characters in the scene. It is the last thing that appears in the script. 
 
 ### Example
 
