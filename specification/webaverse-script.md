@@ -106,6 +106,9 @@ drake#02zhv: Hey I have a favor to ask... Did you see any swords around here?
 scillia#gakgZ: Sure! Follow me.
 /action scillia#gakgZ moves to sword#2xayV
 /action drake#02zhv follows scillia#gakgZ
+scillia#gakgZ: This is the sword my grandfather gave me! It's really special.
+/action drake#02zhv emotes angry
+drake#02zhv: It's just a regular old sword. I doesn't seem very special to me...
 ```
 
 There are two types of lines.
