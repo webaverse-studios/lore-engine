@@ -80,6 +80,12 @@ Id: forest-tree#aeKNn
 Name: Forest Tree
 Metadata:
   HP: 73
+
+Id: blob#R02L8
+Name: Blob
+Description: A blob pet. Very weak.
+Metadata:
+  HP: 30
 ```
 
 Metadata for objects can include any keys/values, and is used for context in AI generation.
@@ -93,13 +99,13 @@ The transcript is the last thing in the file,  speech and actions of the charact
 ```
 scillia#gakgZ: How goes it?
 drake#02zhv: Pretty good, pretty good.
-/character drake#02zhv emotes happy
+/action drake#02zhv emotes happy
 drake#02zhv: Hey come over here for a second.
-/character scillia#gakgZ moves to drake#02zhv
+/action scillia#gakgZ moves to drake#02zhv
 drake#02zhv: Hey I have a favor to ask... Did you see any swords around here?
 scillia#gakgZ: Sure! Follow me.
-/character scillia#gakgZ moves to sword#2xayV
-/character drake#02zhv follows scillia#gakgZ
+/action scillia#gakgZ moves to sword#2xayV
+/action drake#02zhv follows scillia#gakgZ
 ```
 
 There are two types of lines.
@@ -110,40 +116,50 @@ The first type is a _chat line_, which is the dialogue of a character:
 scillia#gakgZ: What's up?
 ```
 
-The second type is the _action line_, which signifies a character performing an action in the scene, in response to what is happening.
+```
+blob#R02L8: Pweez dont hurt me.
+```
+
+The second type is the _action line_, which signifies a character or object performing an action in the scene.
 
 ```
-/character scillia#gakgZ emotes joy
-/character scillia#gakgZ jumps
+/action scillia#gakgZ emotes joy
+/action scillia#gakgZ jumps
 ```
+
+```
+blob#R02L8
+```
+
+All actions must reference valid objects or characters in the scene.
 
 The allowed action types are:
 
 #### Emotes
 
 ```
-/character charactername#xxxxx emotes neutral
-/character charactername#xxxxx emotes angry
-/character charactername#xxxxx emotes fun
-/character charactername#xxxxx emotes joy
-/character charactername#xxxxx emotes sorrow
-/character charactername#xxxxx emotes surprised
+/action charactername#xxxxx emotes neutral
+/action charactername#xxxxx emotes angry
+/action charactername#xxxxx emotes fun
+/action charactername#xxxxx emotes joy
+/action charactername#xxxxx emotes sorrow
+/action charactername#xxxxx emotes surprised
 ```
 
 #### Movement
 
 ```
-/character charactername#xxxxx moves to charactername2#yyyyy
-/character charactername#xxxxx moves to objectname#yyyyy
-/character charactername#xxxxx follows charactername2#yyyyy
+/action charactername#xxxxx moves to charactername2#yyyyy
+/action charactername#xxxxx moves to objectname#yyyyy
+/action charactername#xxxxx follows charactername2#yyyyy
 ```
 
 #### Interaction
 
 ```
-/character charactername#xxxxx activates objectname#yyyyy
-/character charactername#xxxxx picks up objectname#yyyyy
-/character charactername#xxxxx drops objectname#yyyyy
+/action charactername#xxxxx activates objectname#yyyyy
+/action charactername#xxxxx picks up objectname#yyyyy
+/action charactername#xxxxx drops objectname#yyyyy
 ```
 
 Note that in order for a character to pick up an object, it must not be worn by anyone else in the scene.
@@ -151,14 +167,14 @@ Note that in order for a character to pick up an object, it must not be worn by 
 #### States
 
 ```
-/character charactername#xxxxx attacks charactername2#yyyyy
-/character charactername#xxxxx attacks objectname#yyyyy
-/character charactername#xxxxx stops attacking charactername2#yyyyy
-/character charactername#xxxxx stops attacking objectname#yyyyy
+/action charactername#xxxxx attacks charactername2#yyyyy
+/action charactername#xxxxx attacks objectname#yyyyy
+/action charactername#xxxxx stops attacking charactername2#yyyyy
+/action charactername#xxxxx stops attacking objectname#yyyyy
 ```
 
 #### Miscellaneous
 
 ```
-/character charactername#xxxxx jumps
+/action charactername#xxxxx jumps
 ```
