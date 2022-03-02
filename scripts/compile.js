@@ -12,7 +12,7 @@ const objects = [
   fs.readdirSync(path.join(__dirname, '../data/')).map(l => path.join(__dirname, '../data/', l))
     .map(l => {
       return {
-        prompt: '',
+        prompt: 'WEBAVERSE_LORE_FILE',
         path: l,
       };
     })
@@ -21,7 +21,10 @@ const objects = [
 const ws = fs.createWriteStream(path.join(__dirname, '../lore.json'));
 for (const o of objects) {
   const {prompt, path} = o;
-  const completion = fs.readFileSync(path, 'utf8');
+  let completion = fs.readFileSync(path, 'utf8');
+  if (prompt && completion.startsWith(prompt)) {
+    completion = completion.slice(prompt.length);
+  }
   const j = {
     prompt,
     completion,
