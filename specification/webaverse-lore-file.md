@@ -67,25 +67,20 @@ This section describes the interactive objects in the scene. The format is simil
 Id: sword#2xayV
 Name: Sword
 Description: A rusty old sword.
-Metadata:
-  Damage: 20
-  Element: fire
+Metadata: Damage: 20, Element: fire
 
 Id: chair#tFQVL
 Name: Chair
-Metadata:
-  Color: #FF8080
+Metadata: Color: #FF8080
 
 Id: forest-tree#aeKNn
 Name: Forest Tree
-Metadata:
-  HP: 73
+Metadata: HP: 73
 
 Id: blob#R02L8
 Name: Blob
 Description: A blob pet. Very weak.
-Metadata:
-  HP: 30
+Metadata: HP: 30
 ```
 
 Metadata for objects can include any keys/values, and is used for context in AI generation.
