@@ -147,6 +147,8 @@ export const postProcessResponse = (response, characters, dstCharacter) => {
   response = response.trim();
   if (dstCharacter) {
     response = `+${thingHash(dstCharacter, characters.indexOf(dstCharacter))}: ${response}`;
+  } else {
+    response = `+${response}`;
   }
   return response;
 };
