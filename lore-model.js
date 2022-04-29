@@ -5,6 +5,15 @@ export const defaultPlayerBio = 'A new player. Not much is known about them.';
 export const defaultObjectName = 'Thing';
 export const defaultObjectDescription = 'A thing. Not much is known about it.';
 
+// fairly shuffle the array
+const shuffleArray = array => {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+};
+
 const hash = s => murmurhash3(s).toString(16);
 const thingHash = (o, index) => `${hash(o.name)}/${o.name}#${index+1}`;
 const characterLore = `\
