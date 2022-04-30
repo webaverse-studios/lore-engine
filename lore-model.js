@@ -611,7 +611,12 @@ prompt: ${_cleanName(name + ' (Character)')}${description ? ` ${description}` : 
 export const makeSelectCharacterStop = () => `"`;
 export const parseSelectCharacterResponse = response => {
   const match = response.match(/([^\n]*)/);
-  return match ? match[1] : '';
+  const value = match ? match[1] : '';
+  const done = !value;
+  return {
+    value,
+    done,
+  };
 };
 
 export const makeBattleIntroductionPrompt = ({
@@ -668,57 +673,27 @@ ${name}: "`;
 export const makeBattleIntroductionStop = () => `"`;
 export const parseBattleIntroductionResponse = response => response;
 
-export const makeChatPrompt = ({
-  // name,
-  // bio,
-  messages,
-  nextCharacter,
-}) => {
-  return `\
+const actionsExamples = `\
 Character B: "Hey, have I seen you around before?"
-Options: "No I don't think so", "Yes, I've seen you in class"
+Options for Character A: [No I don't think so], [Yes, I've seen you in class]
 Character A: [No I don't think so]
 Character B: "I could have sworn you sit in the row in front of me."
 Character B: "Well in any case, do you know what the teacher said to me?"
-Character B: "He said he was going to fail me because my hair is too spiky."
+Character B: "He said he was going to fail me because my hair is too spiky." END
 
 Character B: "Hey, can I see your sword?"
-Options: "Yes", "No", "Yes, for a price -- 200 gold"
+Options for Character A: [Yes], [No], [Yes, for a price -- 200 gold]
 Character A: [Yes, for a price -- 200 gold]
 Character B: "That's too much. Surely you can offer me a better deal?"
-Options: "Ok, 50 gold", "Changed my mind"
+Options for Character A: [Ok, 50 gold], [Changed my mind]
 Character A: [Changed my mind]
 Character B: "Ok then."
 Character B: "How about 100 gold? Final offer."
+Options for Character A: [Yes], [I don't have that much]
+Character A: [Yes]
+Character B: "Pleasure doing business!" END`;
 
-${messages.map(message => {
-  return `${message.name}: "${message.text}"`;
-}).join('\n')}
-${nextCharacter}: "`;
-};
-export const makeChatStop = () => `"`;
-export const parseChatResponse = response => response;
-
-const actionsExamples = `\
-AI anime avatars in a virtual world MMORPG
-
-Character B: "Hey, have I seen you around before?"
-Options: "No I don't think so", "Yes, I've seen you in class"
-Character A: [No I don't think so]
-Character B: "I could have sworn you sit in the row in front of me."
-Character B: "Well in any case, do you know what the teacher said to me?"
-Character B: "He said he was going to fail me because my hair is too spiky."
-
-Character B: "Hey, can I see your sword?"
-Options: "Yes", "No", "Yes, for a price -- 200 gold"
-Character A: [Yes, for a price -- 200 gold]
-Character B: "That's too much. Surely you can offer me a better deal?"
-Options: "Ok, 50 gold", "Changed my mind"
-Character A: [Changed my mind]
-Character B: "Ok then."
-Character B: "How about 100 gold? Final offer."`;
-
-export const makeOptionsPrompt = ({
+export const makeChatPrompt = ({
   // name,
   // bio,
   messages,
@@ -732,5 +707,50 @@ ${messages.map(message => {
 }).join('\n')}
 ${nextCharacter}: "`;
 };
-export const makeOptionsStop = () => `"`;
-export const parseOptionsResponse = response => response;
+export const makeChatStop = () => `\n`;
+export const parseChatResponse = response => {
+  response = '"' + response;
+
+  const match = response.match(/\s*"(.*?)"\s*(END)?/);
+  const value = match ? match[1] : '';
+  const done = match ? !!match[2] : true;
+
+  return {
+    value,
+    done,
+  };
+};
+
+export const makeOptionsPrompt = ({
+  // name,
+  // bio,
+  messages,
+  nextCharacter,
+}) => {
+  return `\
+${actionsExamples}
+
+${messages.map(message => {
+  return `${message.name}: "${message.text}"`;
+}).join('\n')}
+Options for ${nextCharacter}: [`;
+};
+export const makeOptionsStop = () => `\n`;
+export const parseOptionsResponse = response => {
+  response = '[' + response;
+  
+  const options = [];
+  const r = /\s*\[(.*?)\]\s*/g;
+  let match;
+  while (match = r.exec(response)) {
+    const option = match[1];
+    options.push(option);
+  }
+  
+  const done = options.length === 0;
+
+  return {
+    value: options,
+    done,
+  };
+};
