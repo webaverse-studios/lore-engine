@@ -674,24 +674,35 @@ export const makeBattleIntroductionStop = () => `"`;
 export const parseBattleIntroductionResponse = response => response;
 
 const actionsExamples = `\
-Character B: "Hey, have I seen you around before?"
-Options for Character A: [No I don't think so], [Yes, I've seen you in class]
-Character A: [No I don't think so]
-Character B: "I could have sworn you sit in the row in front of me."
-Character B: "Well in any case, do you know what the teacher said to me?"
-Character B: "He said he was going to fail me because my hair is too spiky." END
+Millie: Hey, have I seen you around before?"
+Options for Westley: [No I don't think so], [Yes, I've seen you in class]
+Westley: "No I don't think so."
+Millie: "I could have sworn you sit in the row in front of me."
+Millie: "Well in any case, do you know what the teacher said to me?"
+Millie: "He said he was going to fail me because my hair is too spiky. Woe is me." *END*
 
-Character B: "Hey, can I see your sword?"
-Options for Character A: [Yes], [No], [Yes, for a price -- 200 gold]
-Character A: [Yes, for a price -- 200 gold]
-Character B: "That's too much. Surely you can offer me a better deal?"
-Options for Character A: [Ok, 50 gold], [Changed my mind]
-Character A: [Changed my mind]
-Character B: "Ok then."
-Character B: "How about 100 gold? Final offer."
-Options for Character A: [Yes], [I don't have that much]
-Character A: [Yes]
-Character B: "Pleasure doing business!" END`;
+Aster: "Hey can I bother you a second?"
+Options for Angelica: [Sure, I have time], [No, I'm busy]
+Angelica: "No, I'm busy."
+Aster: "Alright" *END*
+
+Yune: "I challenge you to a duel!"
+Pris: "Beat it squirt." *END*
+
+Umber: "Something's not right here. I can feel it in my bones."
+Ishkur: "I didn't know you had bones. I thouht you were all jelly inside."
+Umber: "It's a figure of speech." *END*
+
+Gunter: "Have you seen the flowers? Tehy're lovely this time of year."
+Options for Evie: [Yes, I have seen them], [No, I haven't seen them]
+Evie: "No, I haven't seen them."
+Gunter: "Well, then what are we waiting for. Let's go!" *END*
+
+Halley: "Hey, can I see your sword?"
+Prester: "Yes, for a price -- 200 gold"
+Options for Halley: [How about 100 gold], [No, I don't have that much]
+Halley: "No, I don't have that much."
+Prester: "Ok then. I guess you don't want to see the true power of the dark side." *END*`;
 
 export const makeChatPrompt = ({
   // name,
@@ -711,7 +722,7 @@ export const makeChatStop = () => `\n`;
 export const parseChatResponse = response => {
   response = '"' + response;
 
-  const match = response.match(/\s*"(.*?)"\s*(END)?/);
+  const match = response.match(/\s*"(.*)"\s*(\*END\*)?/);
   const value = match ? match[1] : '';
   const done = match ? !!match[2] : true;
 
