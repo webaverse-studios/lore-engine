@@ -86,7 +86,7 @@ ${
 
 const parseLoreResponse = response => {
   let match;
-  // console.log('parse lore', response, match);
+  console.log('parse lore', response, match);
   /* if (match = response?.match(/^\+([^\/]+?)\/([^#]+?)#([0-9]+?):([\s\S]*)\[emote=([\s\S]*?)\]$/)) {
     const hash = match[1];
     const name = match[2];
@@ -146,6 +146,8 @@ const parseLoreResponse = response => {
       object,
       target,
     };
+    //-------------------------------------- Convai --------------------------------------------------
+    // Parsing emotions from response
   } else {
     // console.log('no match', response);
     return null;
@@ -673,36 +675,112 @@ ${name}: "`;
 export const makeBattleIntroductionStop = () => `"`;
 export const parseBattleIntroductionResponse = response => response;
 
+// const actionsExamples = `\
+// Millie: Hey, have I seen you around before?"
+// Options for Westley: [No I don't think so], [Yes, I've seen you in class]
+// Westley: "No I don't think so."
+// Millie: "I could have sworn you sit in the row in front of me."
+// Millie: "Well in any case, do you know what the teacher said to me?"
+// Millie: "He said he was going to fail me because my hair is too spiky. Woe is me." *END*
+
+// Aster: "Hey can I bother you a second?"
+// Options for Angelica: [Sure, I have time], [No, I'm busy]
+// Angelica: "No, I'm busy."
+// Aster: "Alright" *END*
+
+// Yune: "I challenge you to a duel!"
+// Pris: "Beat it squirt." *END*
+
+// Umber: "Something's not right here. I can feel it in my bones."
+// Ishkur: "I didn't know you had bones. I thouht you were all jelly inside."
+// Umber: "It's a figure of speech." *END*
+
+// Gunter: "Have you seen the flowers? Tehy're lovely this time of year."
+// Options for Evie: [Yes, I have seen them], [No, I haven't seen them]
+// Evie: "No, I haven't seen them."
+// Gunter: "Well, then what are we waiting for. Let's go!" *END*
+
+// Halley: "Hey, can I see your sword?"
+// Prester: "Yes, for a price -- 200 gold"
+// Options for Halley: [How about 100 gold], [No, I don't have that much]
+// Halley: "No, I don't have that much."
+// Prester: "Ok then. I guess you don't want to see the true power of the dark side." *END*`;
+
+//--------------------------- Convai -----------------------------------
+// New actionExamples with emotions (, written as reactions here)
+
 const actionsExamples = `\
-Millie: Hey, have I seen you around before?"
-Options for Westley: [No I don't think so], [Yes, I've seen you in class]
-Westley: "No I don't think so."
-Millie: "I could have sworn you sit in the row in front of me."
-Millie: "Well in any case, do you know what the teacher said to me?"
-Millie: "He said he was going to fail me because my hair is too spiky. Woe is me." *END*
+Available reactions:
+surprise
+victory
+alert
+angry
+embarrassed
+headNod
+headShake
+sad
 
-Aster: "Hey can I bother you a second?"
-Options for Angelica: [Sure, I have time], [No, I'm busy]
-Angelica: "No, I'm busy."
-Aster: "Alright" *END*
+Millie: "Hey, have I seen you around before? (react=surprise)"
+Options for Westley: [No I don't think so (react=headShake)], [Yes, I've seen you in class (react=headNod)]
+Westley: "No I don't think so. (react=headShake)"
+Millie: "I could have sworn you sit in the row in front of me. (react=normal)"
 
-Yune: "I challenge you to a duel!"
-Pris: "Beat it squirt." *END*
+Gunter: "Have you seen the flowers? They're lovely this time of year."
+Options for Evie: [Yes, I have seen them (react=headNod)], [No, I haven't seen them (react=headShake)]
+Evie: "No, I haven't seen them (react=headShake)."
+Gunter: "Well, then what are we waiting for? Let's go! (react=victory)" *END*
+ 
+Alex: "These enemies are coming at us hard. (react=alert)"
+Options for Jake: [What should we do? (react=alert)], [I'm not sure, I don't know how to fight. (react=sad)]
+Jake: "What should we do? (react=alert)"
+Alex:  "We need to find some cover and regroup. (react=alert)" *END*
 
-Umber: "Something's not right here. I can feel it in my bones."
-Ishkur: "I didn't know you had bones. I thouht you were all jelly inside."
-Umber: "It's a figure of speech." *END*
+Mike: "What happened to the mirror? (react=angry)"
+Options for Amy: [I don't know, I wasn't here when it happened (react=sad)], [I broke it (react=embarrassed)]
+Amy: "I broke it. (react=embarrassed)"
+Mike: "That's not good. How are we going to see our reflection now? (react=sad)" *END*
 
-Gunter: "Have you seen the flowers? Tehy're lovely this time of year."
-Options for Evie: [Yes, I have seen them], [No, I haven't seen them]
-Evie: "No, I haven't seen them."
-Gunter: "Well, then what are we waiting for. Let's go!" *END*
+Joe: "Congrats on winning the game (react=victory)"
+Options for Keith: [You're welcome (react=normal)], [Thanks, I couldn't have done it without you (react=headNod)]
+Keith: "Thanks, I couldn't have done it without you (react=headNod)"
+Joe: " I don't know about that. You were the one who made all the calls. Good job! (react = victory)" *END*
 
-Halley: "Hey, can I see your sword?"
-Prester: "Yes, for a price -- 200 gold"
-Options for Halley: [How about 100 gold], [No, I don't have that much]
-Halley: "No, I don't have that much."
-Prester: "Ok then. I guess you don't want to see the true power of the dark side." *END*`;
+Peter: "What are you doing here? (react=surprised)"
+Options for Molly: [I'm lost, I don't know where I am. (react=sad)], [I'm looking for the library. (react=normal)]
+Molly: "I'm lost, I don't know where I am. (react=sad)"
+Peter: "Let me help you, where are you trying to go? (react=normal)" *END*
+
+Kate: "What happened to your house? (react=sad)"
+Jim: "Somebody broke in and trashed the place. (react=anger)"
+Options for Kate: [That's awful, I'm so sorry. (react=sad)], [Do you know who did it? (react=normal)]
+Kate: "Do you know who did it? (react=normal)"
+Jim: "Yes, it was the kids from down the block. (react=anger)"
+Options for Kate: [That's great, now you can call the police and they'll arrest them. (react=victory)], [Do you want me to help you clean up? (react=headNod)]
+Kate: "Do you want me to help you clean up? (react=headNod)"
+Jim: "No, I don't want your help. I can do it myself. ( react= headShake)" *END*
+
+Emily: "Let's go to the treehouse (react=normal)"
+Brad: "I don't know, my mom said I'm not allowed to go there. (react=sad)"
+Options for Emily: [Your mom is just being overprotective. (react= headShake)], [We'll be careful, I promise. (react = headNod)] 
+Emily: "Your mom is just being overprotective. Come on, it'll be fun!( react=headShake)"
+Brad: "Okay, but if we get in trouble it's your fault.(react=normal)" *END*
+
+Tyler: "I like your sword, can I also have a weapon? (react=normal)"
+Sophie: "Yes, you will need a weapon. You're going to get yourself killed if you go into battle unarmed!(react=anger)" 
+Options for Tyler:[I'll be fine, I know what I'm doing. (react= headShake)], [Okay, give me a sword. (react = headNod)] 
+Tyler: "Okay, give me a sword.( react=headNod)" *END*
+
+Yune: "I challenge you to a duel! (react=angry)"
+Pris: "I'm not dueling you, I don't have time for this. (react=headShake)"
+Options for Yune: [Duel me or face the consequences! (react= angry)],[Fine, let's get this over with. ( react= normal)] 
+Yune: "Duel me or face the consequences!"(react=angry)"
+Pris: "I don't have time for your games.(react = headShake)" *END*
+
+Jake: "What are you doing?  (react=surprised)"
+Amy: "I'm looking for my cat. Have you seen her?  ( react= normal)"
+Options for Jake:[No, I haven't seen your cat. (react= headShake)], [Yes, I saw your cat go into the treehouse. (react = headNod)] 
+Jake: "No, I haven't seen your cat.(react=headShake)"
+Amy: "Well, if you see her can you let me know?  (react=normal)" *END*`;
 
 export const makeChatPrompt = ({
   // name,
@@ -722,9 +800,14 @@ export const makeChatStop = () => `\n`;
 export const parseChatResponse = response => {
   response = '"' + response;
 
-  const match = response.match(/\s*"(.*)"\s*(\*END\*)?/);
+  //---------------------------- Convai -------------------------------------
+  // Parsing emotion from the response
+  const match = response.match(/\s*"(.*)\(react=([\s\S]*?)\)"\s*(\*END\*)?/);
   const value = match ? match[1] : '';
-  const done = match ? !!match[2] : true;
+  const emote = match ?match[2] : '';
+  const done = match ? !!match[3] : true;
+
+  console.log("Emotion: ", emote)
 
   return {
     value,
