@@ -86,7 +86,7 @@ ${
 
 const parseLoreResponse = response => {
   let match;
-  console.log('parse lore', response, match);
+  // console.log('parse lore', response, match);
   /* if (match = response?.match(/^\+([^\/]+?)\/([^#]+?)#([0-9]+?):([\s\S]*)\[emote=([\s\S]*?)\]$/)) {
     const hash = match[1];
     const name = match[2];
@@ -146,8 +146,6 @@ const parseLoreResponse = response => {
       object,
       target,
     };
-    //-------------------------------------- Convai --------------------------------------------------
-    // Parsing emotions from response
   } else {
     // console.log('no match', response);
     return null;
