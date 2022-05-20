@@ -718,67 +718,68 @@ headNod
 headShake
 sad
 
-Millie: "Hey, have I seen you around before? (react=surprise)"
-Options for Westley: [No I don't think so (react=headShake)], [Yes, I've seen you in class (react=headNod)]
-Westley: "No I don't think so. (react=headShake)"
-Millie: "I could have sworn you sit in the row in front of me. (react=normal)"
+Millie: "Hey, have I seen you around before? (react = surprise)"
+Options for Westley: [No, I don't think so. (react = headShake)], [Yes, I've seen you in class. (react = headNod)]
+Westley: "No, I don't think so. (react = headShake)"
+Millie: "I could have sworn you sit in the row in front of me. (react = normal)"
 
 Gunter: "Have you seen the flowers? They're lovely this time of year."
-Options for Evie: [Yes, I have seen them (react=headNod)], [No, I haven't seen them (react=headShake)]
-Evie: "No, I haven't seen them (react=headShake)."
-Gunter: "Well, then what are we waiting for? Let's go! (react=victory)" *END*
+Options for Evie: [Yes, I have seen them. (react = headNod)], [No, I haven't seen them. (react = headShake)]
+Evie: "No, I haven't seen them. (react = headShake)."
+Gunter: "Well, then what are we waiting for? Let's go! (react = victory)" *END*
  
-Alex: "These enemies are coming at us hard. (react=alert)"
-Options for Jake: [What should we do? (react=alert)], [I'm not sure, I don't know how to fight. (react=sad)]
-Jake: "What should we do? (react=alert)"
-Alex:  "We need to find some cover and regroup. (react=alert)" *END*
+Alex: "These enemies are coming at us hard. (react = alert)"
+Options for Jake: [What should we do? (react = alert)], [I'm not sure, I don't know how to fight. (react = sad)]
+Jake: "What should we do? (react = alert)"
+Alex:  "We need to find some cover and regroup. (react = alert)" *END*
 
-Mike: "What happened to the mirror? (react=angry)"
-Options for Amy: [I don't know, I wasn't here when it happened (react=sad)], [I broke it (react=embarrassed)]
-Amy: "I broke it. (react=embarrassed)"
-Mike: "That's not good. How are we going to see our reflection now? (react=sad)" *END*
+Mike: "What happened to the mirror? (react = angry)"
+Options for Amy: [I don't know, I wasn't here when it happened. (react = sad)], [I broke it. (react = embarrassed)]
+Amy: "I broke it. (react = embarrassed)"
+Mike: "That's not good. How are we going to see our reflection now? (react = sad)" *END*
 
-Joe: "Congrats on winning the game (react=victory)"
-Options for Keith: [You're welcome (react=normal)], [Thanks, I couldn't have done it without you (react=headNod)]
-Keith: "Thanks, I couldn't have done it without you (react=headNod)"
+Keith: "Yay! I won. (react = victory)"
+Joe: "Congrats on winning the game (react = victory)"
+Options for Keith: [You're welcome. (react = normal)], [Thanks, I couldn't have done it without you. (react = headNod)]
+Keith: "Thanks, I couldn't have done it without you. (react = headNod)"
 Joe: " I don't know about that. You were the one who made all the calls. Good job! (react = victory)" *END*
 
-Peter: "What are you doing here? (react=surprised)"
-Options for Molly: [I'm lost, I don't know where I am. (react=sad)], [I'm looking for the library. (react=normal)]
-Molly: "I'm lost, I don't know where I am. (react=sad)"
-Peter: "Let me help you, where are you trying to go? (react=normal)" *END*
+Peter: "What are you doing here? (react = surprised)"
+Options for Molly: [I'm lost, I don't know where I am. (react = sad)], [I'm looking for the library. (react = normal)]
+Molly: "I'm lost, I don't know where I am. (react = sad)"
+Peter: "Let me help you, where are you trying to go? (react = normal)" *END*
 
-Kate: "What happened to your house? (react=sad)"
-Jim: "Somebody broke in and trashed the place. (react=anger)"
-Options for Kate: [That's awful, I'm so sorry. (react=sad)], [Do you know who did it? (react=normal)]
-Kate: "Do you know who did it? (react=normal)"
-Jim: "Yes, it was the kids from down the block. (react=anger)"
-Options for Kate: [That's great, now you can call the police and they'll arrest them. (react=victory)], [Do you want me to help you clean up? (react=headNod)]
-Kate: "Do you want me to help you clean up? (react=headNod)"
-Jim: "No, I don't want your help. I can do it myself. ( react= headShake)" *END*
+Kate: "What happened to your house? (react = sad)"
+Jim: "Somebody broke in and trashed the place. (react = anger)"
+Options for Kate: [That's awful, I'm so sorry. (react = sad)], [Do you know who did it? (react = normal)]
+Kate: "Do you know who did it? (react = normal)"
+Jim: "Yes, it was the kids from down the block. (react = anger)"
+Options for Kate: [That's great, now you can call the police and they'll arrest them. (react = victory)], [Do you want me to help you clean up? (react = headNod)]
+Kate: "Do you want me to help you clean up? (react = headNod)"
+Jim: "No, I don't want your help. I can do it myself. (react = headShake)" *END*
 
-Emily: "Let's go to the treehouse (react=normal)"
-Brad: "I don't know, my mom said I'm not allowed to go there. (react=sad)"
-Options for Emily: [Your mom is just being overprotective. (react= headShake)], [We'll be careful, I promise. (react = headNod)] 
-Emily: "Your mom is just being overprotective. Come on, it'll be fun!( react=headShake)"
-Brad: "Okay, but if we get in trouble it's your fault.(react=normal)" *END*
+Emily: "Let's go to the treehouse (react = normal)"
+Brad: "I don't know, my mom said I'm not allowed to go there. (react = sad)"
+Options for Emily: [Your mom is just being overprotective. Come on, it'll be fun! (react = headShake)], [We'll be careful, I promise. (react = headNod)] 
+Emily: "Your mom is just being overprotective. Come on, it'll be fun! (react = headShake)"
+Brad: "Okay, but if we get in trouble it's your fault. (react = normal)" *END*
 
-Tyler: "I like your sword, can I also have a weapon? (react=normal)"
-Sophie: "Yes, you will need a weapon. You're going to get yourself killed if you go into battle unarmed!(react=anger)" 
-Options for Tyler:[I'll be fine, I know what I'm doing. (react= headShake)], [Okay, give me a sword. (react = headNod)] 
-Tyler: "Okay, give me a sword.( react=headNod)" *END*
+Tyler: "I like your sword, can I also have a weapon? (react = normal)"
+Sophie: "Yes, you will need a weapon. You're going to get yourself killed if you go into battle unarmed! (react = anger)" 
+Options for Tyler:[I'll be fine, I know what I'm doing. (react = headShake)], [Okay, give me a sword. (react = headNod)] 
+Tyler: "Okay, give me a sword. (react = headNod)" *END*
 
-Yune: "I challenge you to a duel! (react=angry)"
-Pris: "I'm not dueling you, I don't have time for this. (react=headShake)"
-Options for Yune: [Duel me or face the consequences! (react= angry)],[Fine, let's get this over with. ( react= normal)] 
-Yune: "Duel me or face the consequences!"(react=angry)"
-Pris: "I don't have time for your games.(react = headShake)" *END*
+Yune: "I challenge you to a duel! (react = angry)"
+Pris: "I'm not dueling you, I don't have time for this. (react = headShake)"
+Options for Yune: [Duel me or face the consequences! (react = angry)],[Fine, let's get this over with. (react = normal)] 
+Yune: "Duel me or face the consequences! (react = angry)"
+Pris: "I don't have time for your games. (react = headShake)" *END*
 
-Jake: "What are you doing?  (react=surprised)"
-Amy: "I'm looking for my cat. Have you seen her?  ( react= normal)"
-Options for Jake:[No, I haven't seen your cat. (react= headShake)], [Yes, I saw your cat go into the treehouse. (react = headNod)] 
-Jake: "No, I haven't seen your cat.(react=headShake)"
-Amy: "Well, if you see her can you let me know?  (react=normal)" *END*`;
+Jake: "What are you doing?  (react = surprised)"
+Amy: "I'm looking for my cat. Have you seen her?  (react = normal)"
+Options for Jake:[No, I haven't seen your cat. (react =  headShake)], [Yes, I saw your cat go into the treehouse. (react = headNod)] 
+Jake: "No, I haven't seen your cat. (react = headShake)"
+Amy: "Well, if you see her can you let me know?  (react = normal)" *END*`;
 
 export const makeChatPrompt = ({
   // name,
@@ -786,11 +787,12 @@ export const makeChatPrompt = ({
   messages,
   nextCharacter,
 }) => {
+  // Modifying messages to include emotes
   return `\
 ${actionsExamples}
 
 ${messages.map(message => {
-  return `${message.name}: "${message.text}"`;
+  return `${message.name}: "${message.text} (react = ${(message.emote ? message.emote : 'normal')})"`;
 }).join('\n')}
 ${nextCharacter}: "`;
 };
@@ -800,17 +802,33 @@ export const parseChatResponse = response => {
 
   //---------------------------- Convai -------------------------------------
   // Parsing emotion from the response
-  const match = response.match(/\s*"(.*)\(react=([\s\S]*?)\)"\s*(\*END\*)?/);
-  const value = match ? match[1] : '';
-  const emote = match ?match[2] : '';
-  const done = match ? !!match[3] : true;
+  let match;
+  if (match = response.match(/\s*"(.*)\(react\s=\s([\s\S]*?)\)"\s*(\*END\*)?/) ){
+    const value = match ? match[1] : '';
+    const emote = match ?match[2] : '';
+    const done = match ? !!match[3] : true;
 
-  console.log("Emotion: ", emote)
+    console.log("Emotion: ", emote)
 
-  return {
-    value,
-    done,
-  };
+    return {
+      value,
+      emote,
+      done,
+    };
+  } else if (match = response.match(/\s*"(.*)\s*"\s*(\*END\*)?/) ){
+    const value = match ? match[1] : '';
+    const emote = 'normal';
+    const done = match ? !!match[3] : true;
+
+    console.log("Emotion: ", emote)
+
+    return {
+      value,
+      emote,
+      done,
+    };
+  }
+  
 };
 
 export const makeOptionsPrompt = ({
@@ -823,7 +841,7 @@ export const makeOptionsPrompt = ({
 ${actionsExamples}
 
 ${messages.map(message => {
-  return `${message.name}: "${message.text}"`;
+  return `${message.name}: "${message.text} (react = ${(message.emote ? message.emote : 'normal')})"`;
 }).join('\n')}
 Options for ${nextCharacter}: [`;
 };
@@ -832,7 +850,7 @@ export const parseOptionsResponse = response => {
   response = '[' + response;
   
   const options = [];
-  const r = /\s*\[(.*?)\(react=([\s\S]*?)\)\s*\]\s*/g;
+  const r = /\s*\[(.*?)\(react\s=\s([\s\S]*?)\)\s*\]\s*/g;
   let match;
   while (match = r.exec(response)) {
     const option = match[1];
@@ -843,7 +861,10 @@ export const parseOptionsResponse = response => {
     console.log("Emotions in Options: ", emote);
 
     // Passing both text respons and emotes
-    options.push((option, emote));
+    options.push({
+      message: option,
+      emote: emote
+    });
   }
   
   const done = options.length === 0;
