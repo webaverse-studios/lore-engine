@@ -832,10 +832,17 @@ export const parseOptionsResponse = response => {
   response = '[' + response;
   
   const options = [];
-  const r = /\s*\[(.*?)\]\s*/g;
+  const r = /\s*\[(.*?)\(react=([\s\S]*?)\)\s*\]\s*/g;
   let match;
   while (match = r.exec(response)) {
     const option = match[1];
+
+    // ---------------- Convai -------------------------
+    // Parsing the emotion from the list of options.
+    const emote = match[2];
+    console.log("Emotions in Options: ", emote);
+    //--------------------------------------------------
+
     options.push(option);
   }
   
