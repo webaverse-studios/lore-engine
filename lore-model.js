@@ -841,9 +841,9 @@ export const parseOptionsResponse = response => {
     // Parsing the emotion from the list of options.
     const emote = match[2];
     console.log("Emotions in Options: ", emote);
-    //--------------------------------------------------
 
-    options.push(option);
+    // Passing both text respons and emotes
+    options.push((option, emote));
   }
   
   const done = options.length === 0;
