@@ -803,7 +803,7 @@ export const parseChatResponse = response => {
   //---------------------------- Convai -------------------------------------
   // Parsing emotion from the response
   let match;
-  if (match = response.match(/\s*"(.*)\(react\s*=\s*([\s\S]*?)\)"\s*(\*END\*)?/) ){
+  if (match = response.match(/\s*"(.*)\(react\s*=\s*([\s\S]*?)\s*\)"\s*(\*END\*)?/) ){
     const value = match ? match[1] : '';
     const emote = match ?match[2] : '';
     const done = match ? !!match[3] : true;
