@@ -704,9 +704,6 @@ export const parseBattleIntroductionResponse = response => response;
 // Halley: "No, I don't have that much."
 // Prester: "Ok then. I guess you don't want to see the true power of the dark side." *END*`;
 
-//--------------------------- Convai -----------------------------------
-// New actionExamples with emotions (, written as reactions here)
-
 const actionsExamples = `\
 Available reactions:
 surprise
@@ -800,8 +797,6 @@ export const makeChatStop = () => `\n`;
 export const parseChatResponse = response => {
   response = '"' + response;
 
-  //---------------------------- Convai -------------------------------------
-  // Parsing emotion from the response
   let match;
   if (match = response.match(/\s*"(.*)\(react\s*=\s*([\s\S]*?)\s*\)"\s*(\*END\*)?/) ){
     const value = match ? match[1] : '';
@@ -855,7 +850,6 @@ export const parseOptionsResponse = response => {
   while (match = r.exec(response)) {
     const option = match[1];
 
-    // ---------------- Convai -------------------------
     // Parsing the emotion from the list of options.
     const emote = match[2];
     console.log("Emotions in Options: ", emote);
