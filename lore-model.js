@@ -206,7 +206,7 @@ Output:`;
 
 const parseLoreResponse = response => {
   let match;
-  console.log("Response: ", response)
+  // console.log("Response: ", response)
   // console.log('parse lore', response, match);
   /* if (match = response?.match(/^\+([^\/]+?)\/([^#]+?)#([0-9]+?):([\s\S]*)\[emote=([\s\S]*?)\]$/)) {
     const hash = match[1];
