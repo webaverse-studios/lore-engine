@@ -206,6 +206,7 @@ Output:`;
 
 const parseLoreResponse = response => {
   let match;
+  console.log("Response: ", response)
   // console.log('parse lore', response, match);
   /* if (match = response?.match(/^\+([^\/]+?)\/([^#]+?)#([0-9]+?):([\s\S]*)\[emote=([\s\S]*?)\]$/)) {
     const hash = match[1];
@@ -246,16 +247,16 @@ const parseLoreResponse = response => {
       object,
       target,
     };
-  } else if (match = response?.match(/^\+([^\/]+?)\/([^#]+?)#([0-9]+?):([^\(]*?)\(\s*react\s*=([\s\S]*?),\s*action\s*=([\s\S]*?),\s*object\s*=([\s\S]*?),\s*target\s*=([\s\S]*?)\)$/)){
+  } else if (match = response?.match(/^\+([^\/]+?)\/([^#]+?)#([0-9]+?):([^\(]*?)\((\s*react\s*=([\s\S]*?))*,*(\s*action\s*=([\s\S]*?))*,*(\s*object\s*=([\s\S]*?))*,*(\s*target\s*=([\s\S]*?))*\)*$/)){
     console.log("match2 found", match)
     const hash = match[1];
     const name = match[2];
     const nonce = parseInt(match[3], 10);
     const message = match[4].trim();
-    const emote = match[5].trim();
-    const action = match[6].trim();
-    const object = match[7].trim();
-    const target = match[8].trim();
+    const emote = match[5] ? match[6].trim() : 'none';
+    const action = match[7] ? match[8].trim() : 'none';
+    const object = match[9] ? match[10].trim() : 'none';
+    const target = match[11] ? match[12].trim() : 'none';
     return {
       hash,
       name,
