@@ -246,7 +246,7 @@ const parseLoreResponse = response => {
       object,
       target,
     };
-  } else if (match = response?.match(/^\+([^\/]+?)\/([^#]+?)#([0-9]+?):([^\[]*?)\s*\(react\s*=\s*([\s\S]*?)\s*,\s*action\s*=([\s\S]*?),\s*object\s*=([\s\S]*?),\s*target\s*=([\s\S]*?)\)$/)){
+  } else if (match = response?.match(/^\+([^\/]+?)\/([^#]+?)#([0-9]+?):([^\(]*?)\(\s*react\s*=([\s\S]*?),\s*action\s*=([\s\S]*?),\s*object\s*=([\s\S]*?),\s*target\s*=([\s\S]*?)\)$/)){
     console.log("match2 found", match)
     const hash = match[1];
     const name = match[2];
