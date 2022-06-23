@@ -30,32 +30,10 @@ export const makeLorePrompt = ({
 }) => `\
 ${characterLore}
 
-Script examples:
-
-\`\`\`
-+${thingHash({name:'Character1'}, 0)}: What's the meaning of life? [emote=normal,action=none,object=none,target=none]
-+${thingHash({name:'Npc1'}, 1)}: Doesn't matter. Anyway, I'll follow you Character1. [emote=happy,action=follow,object=none,target=${thingHash({name:'Character1'}, 0)}]
-+${thingHash({name:'Character1'}, 0)}: Don't do that. [emote=normal,action=none,object=none,target=none]
-+${thingHash({name:'Npc1'}, 1)}: Ok I'll stop. [emote=normal,action=stop,object=none,target=none]
-+${thingHash({name:'Character1'}, 0)}: Come over here, Npc1! [emote=normal,action=none,object=none,target=none]
-+${thingHash({name:'Npc1'}, 1)}: Ok coming. [emote=normal,action=none,object=none,target=${thingHash({name:'Character1'}, 0)}]
-+${thingHash({name:'Npc1'}, 1)}: I'm going Super Saiyan mode! [emote=angry,action=supersaiyan,object=none,target=none]
-+${thingHash({name:'Character1'}, 0)}: Press that button. [emote=normal,action=none,object=none,target=none]
-+${thingHash({name:'Npc1'}, 1)}: What does this button do? [emote=joy,action=use,object=${'BUTTON#1'},target=none]
-+${thingHash({name:'Npc1'}, 1)}: Here, Character1, take my sword. [emote=sorrow,action=give,object=${'SWORD#2'},target=${thingHash({name:'Character1'}, 0)}]
-+${thingHash({name:'Npc1'}, 1)}: I'm equipping my armor. [emote=angry,action=equip,object=${'ARMOR#5'},target=none]
-+${thingHash({name:'Npc1'}, 1)}: I'm dropping this potion. [emote=normal,action=drop,object=${'POTION#6'},target=none]
-+${thingHash({name:'Npc1'}, 1)}: Ok Character1, I'll go get the bow. [emote=normal,action=fetch,object=${'BOW#7'},target=${thingHash({name:'Character1'}, 0)}]
-\`\`\`
-
-# Scene 1
-
 # Setting
-
 ${settings.join('\n\n')}
 
 ## Characters
-
 ${
   characters.map((c, i) => {
     return `Id: ${thingHash(c, i)}
@@ -66,23 +44,165 @@ Bio: ${c.bio}
 }
 
 # Objects
-
 ${
   objects.map((o, i) => thingHash(o, i)).join('\n')
 }
 
-## Script (raw format)
+# Basic Reactions 
+Reaction: headShake
+Description:  When the Character does not agree with what is in the Input.
+Reaction: headNod
+Description: When the Character agrees with what is being said in the Input.
+Reaction: normal
+Description: When the Character has no emotion attached to the Input.
+Reaction: sad
+Description: When the Charcater feels sad or bad about what is in the Input.
+Reaction: victory
+Description: When the Character is happy or overjoyed by what is in the Input.
+Reaction: alert
+Description: When the Character gets cautious about what is in the Input.
+Reaction: angry
+Description: When the Character is not satisfied or angry of what is in the Input.
+Reaction: embarrased
+Description: When the Character is ashamed of what is in the Input.
+Reaction: surprised
+Description: When the Character did not expect what is in the Input.
 
+# Basic Actions 
+Action: move to
+Description:  When the Input clearly indicates that a Character needs to move to another Object/Character, use this action.
+Action: follow
+Description: When the Input clearly indicates that a Character needs to follow another Character, use this action.
+Action: pick up
+Description: When the Input clearly indicates that a Character needs to pick up an Object, use this action.
+Action: drops
+Description: When the Input clearly indicates that a Character needs to give an Object to someone, put an Object at some particular place or just simply remove it from their inventory, use this action.
+Action: none
+Description: When the Input clearly indicates that there is no need for any action to be taken by a Character, use this action.
+Action: stop
+Description: When the Input clearly indicates that a Character has to stop something, use this action.
+
+# Examples of How to Parse Inputs
+Input:
++a8e44f13/Scillia#4: Hi Drake! Whats up?.
++707fbe84/Drake#3:
+Output:
++707fbe84/Drake#3: I am doing good. How about you? (react = normal, action = follow, object = none, target = scillia#4)
+Input:
++9f493510/Hyacinth#2: What mischief are you upto today?
++8c83258d/Anon#1:
+Output:
++8c83258d/Anon#1: None. I have been good all day. (react = headNod, action = none, object = none, target = none)
+Input:
++a8e44f13/Scillia#4: Why did you break that expensive artifact? Now I will have to pay up for the damage.
++707fbe84/Drake#3:
+Output:
++707fbe84/Drake#3: I am really sorry about it. (react = embarrassed, action = none, object = none, target = none)
+Input:
++8c83258d/Anon#1: We finally won the battle Juniper!
++a6dfd77c/Juniper#5:
+Output:
++a6dfd77c/Juniper#5: Hurray! We did it. (react = victory, action = none, object = none, target = none)
+Input:
++a8e44f13/Scillia#4: I am tired. How far is the dungeon, Hyacinth?
++9f493510/Hyacinth#2:
+Output:
++9f493510/Hyacinth#2: Just a bit further, don't worry. (react = normal, action = none, object = none, target = none)
+Input:
++707fbe84/Drake#3: Hyacinth, are you going to visit the Church today?
++9f493510/Hyacinth#2:
+Output:
++9f493510/Hyacinth#2: No, I will not go today. (react = headShake, action = none, object = none, target = none)
+Input:
++707fbe84/Drake#3: Hyacinth, are you going to visit the Church today?
++9f493510/Hyacinth#2:
+Output:
++9f493510/Hyacinth#2: Yes. I will go now. (react = headNod, action = moveto, object = none, target = church#4)
+Input:
++707fbe84/Drake#3: Hyacinth, we are being attacked. Be prepared.
++9f493510/Hyacinth#2:
+Output:
++9f493510/Hyacinth#2: I will get my sword. I am ready. (react = alert, action = pick up, object = none, target = sword#2)
+Input:
++8c83258d/Anon#1: Are you funny?
++9f493510/Hyacinth#2:
+Output:
++9f493510/Hyacinth#2: I like to think so! I try to find the humor in everything, even if it's dark or bitter. (react = normal, action = none, object = none, target = none)
+Input:
++8c83258d/Anon#1: Juniper, here I brought you everything you need to win this competition.
++a6dfd77c/Juniper#5:
+Output:
++a6dfd77c/Juniper#5: Wow! That is all I needed. Thank you so much. (react = surprised, action = none, object = none, target = none)
+Input:
++a8e44f13/Scillia#4: Can we visit the dungeons now?
++9f493510/Hyacinth#2:
+Output:
++9f493510/Hyacinth#2: No, we cannot go there at night. (react = headShake, action = none, object = none, target = none)
+Input:
++8c83258d/Anon#1: Let us go to the Hovercraft together, Drake!
++707fbe84/Drake#3:
+Output:
++707fbe84/Drake#3: That's a great idea! (react = victory, action = none, object = none, target = none)
+Input:
++8c83258d/Anon#1: Thats a cool sword.
++a6dfd77c/Juniper#5:
+Output:
++a6dfd77c/Juniper#5: Thanks. It's made of titanium and it's sharp, dual-edged. Perfect for slicing, stabbing, and jabbing my enemies. (react = normal, action = pick up, object = none, target = sword#2)
+Input:
++9f493510/Hyacinth#2: Today I lost one of my closest firend in the battle.
++8c83258d/Anon#1:
+Output:
++8c83258d/Anon#1: I am so sorry to hear it. (react = sad, action = none, object = none, target = none)
+Input:
++9f493510/Hyacinth#2: Your actions have caused a lot of trouble to others.
++a8e44f13/Scillia#4:
+Output:
++a8e44f13/Scillia#4: But I did not do it. (react = angry, action = none, object = none, target = none)
+Input:
++707fbe84/Drake#3: Hyacinth, when was the last time you were here?
++9f493510/Hyacinth#2:
+Output:
++9f493510/Hyacinth#2: I haven't been back since my father’s funeral. (react = sad, action = none, object = none, target = none)
+Input:
++a8e44f13/Scillia#4: Hey Hyacinth, as soon as we open the barrier, we rush to the site and attack.
++9f493510/Hyacinth#2:
+Output:
++9f493510/Hyacinth#2: I am ready. Signal me as soon as the barrier opens. (react = alert, action = follow, object = none, target = none)
+Input:
++8c83258d/Anon#1: Hyacinth want to go on an adventure together??
++9f493510/Hyacinth#2:
+Output:
++9f493510/Hyacinth#2: Sure, lets go! (react = headNod, action = none, object = none, target = none)
+Input:
++8c83258d/Anon#1: Would you tell me more about Ironford?
++707fbe84/Drake#3:
+Output:
++707fbe84/Drake#3: The city of Ironford was built in the center of a giant forest and is truly a modest marvel. Its allure is matched by the backdrop of lush forests which have helped shape the city to what it is today. (react = headNod, action = none, object = none, target = none)
+Input:
++8c83258d/Anon#1: The monsters have captures the people of the village.
++9f493510/Hyacinth#2:
+Output:
++9f493510/Hyacinth#2: I will find and kill each of those monsters myself. (react = angry, action = move to, object = none, target = monster#9)
+Input:
++a8e44f13/Scillia#4: Hey Hyacinth, what is your favorite book?
++9f493510/Hyacinth#2:
+Output:
++9f493510/Hyacinth#2: My favorite book is The Lord of the Rings. I love the story and the world that J.R.R. Tolkien created. (react = normal, action = none, object = none, target = none)
+
+Input:
 ${
   messages.map(m => {
     const characterIndex = characters.indexOf(m.character);
-    const suffix = `[emote=${m.emote},action=${m.action},object=${m.object},target=${m.target}]`;
-    return `+${thingHash(m.character, characterIndex)}: ${m.message} ${suffix}`;
+    // const suffix = `[emote=${m.emote},action=${m.action},object=${m.object},target=${m.target}]`;
+    // return `+${thingHash(m.character, characterIndex)}: ${m.message} ${suffix}`;
+    const suffix = `react=${m.emote},action=${m.action},object=${m.object},target=${m.target}]`
+    return `+${thingHash(m.character, characterIndex)}: ${m.message}`;
   }).join('\n')
 }
 +${
-  dstCharacter ? `${thingHash(dstCharacter, characters.indexOf(dstCharacter))}:` : ''
-}`;
+  dstCharacter ? `+${thingHash(dstCharacter, characters.indexOf(dstCharacter))}:` : ''
+}
+Output:`;
 
 const parseLoreResponse = response => {
   let match;
@@ -126,7 +246,27 @@ const parseLoreResponse = response => {
       object,
       target,
     };
-  } else if (match = response?.match(/^\+([^\/]+?)\/([^#]+?)#([0-9]+?):([^\[]*?)$/)) {
+  } else if (match = response?.match(/^\+([^\/]+?)\/([^#]+?)#([0-9]+?):([^\[]*?)\s*\(react\s*=\s*([\s\S]*?)\s*,\s*action\s*=([\s\S]*?),\s*object\s*=([\s\S]*?),\s*target\s*=([\s\S]*?)\)$/)){
+    console.log("match2 found", match)
+    const hash = match[1];
+    const name = match[2];
+    const nonce = parseInt(match[3], 10);
+    const message = match[4].trim();
+    const emote = match[5].trim();
+    const action = match[6].trim();
+    const object = match[7].trim();
+    const target = match[8].trim();
+    return {
+      hash,
+      name,
+      nonce,
+      message,
+      emote,
+      action,
+      object,
+      target,
+    };
+  }else if (match = response?.match(/^\+([^\/]+?)\/([^#]+?)#([0-9]+?):([^\[]*?)$/)) {
     // console.log('match 2', match);
     const hash = match[1];
     const name = match[2];
@@ -154,11 +294,11 @@ const parseLoreResponse = response => {
 export const makeLoreStop = (localCharacter, localCharacterIndex) => `\n+${thingHash(localCharacter, localCharacterIndex)}`;
 export const postProcessResponse = (response, characters, dstCharacter) => {
   response = response.trim();
-  if (dstCharacter) {
-    response = `+${thingHash(dstCharacter, characters.indexOf(dstCharacter))}: ${response}`;
-  } else {
-    response = `+${response}`;
-  }
+  // if (dstCharacter) {
+  //   response = `+${thingHash(dstCharacter, characters.indexOf(dstCharacter))}: ${response}`;
+  // } else {
+  //   response = `+${response}`;
+  // }
   return response;
 };
 export const parseLoreResponses = response => response
