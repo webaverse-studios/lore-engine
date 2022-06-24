@@ -267,7 +267,28 @@ const parseLoreResponse = response => {
       object,
       target,
     };
-  }else if (match = response?.match(/^\+([^\/]+?)\/([^#]+?)#([0-9]+?):([^\[]*?)$/)) {
+  } else if (match = response?.match(/^\+([^\/]+?)\/([^#]+?)#([0-9]+?):([^\(]*?)\(([\s\S]*?)\)*$/)){
+    console.log("match3 found", match)
+    const hash = match[1];
+    const name = match[2];
+    const nonce = parseInt(match[3], 10);
+    const message = match[4].trim();
+    const emote = 'none';
+    const action = 'none';
+    const object = 'none';
+    const target = 'none';
+    return {
+      hash,
+      name,
+      nonce,
+      message,
+      emote,
+      action,
+      object,
+      target,
+    };
+  }
+  else if (match = response?.match(/^\+([^\/]+?)\/([^#]+?)#([0-9]+?):([^\[]*?)$/)) {
     // console.log('match 2', match);
     const hash = match[1];
     const name = match[2];
