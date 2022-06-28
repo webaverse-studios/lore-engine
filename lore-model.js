@@ -162,7 +162,7 @@ Input:
 +707fbe84/Drake#3: Hyacinth, when was the last time you were here?
 +9f493510/Hyacinth#2:
 Output:
-+9f493510/Hyacinth#2: I haven't been back since my father’s funeral. (react = sad, action = none, object = none, target = none)
++9f493510/Hyacinth#2: I haven't been back since my father's funeral. (react = sad, action = none, object = none, target = none)
 Input:
 +a8e44f13/Scillia#4: Hey Hyacinth, as soon as we open the barrier, we rush to the site and attack.
 +9f493510/Hyacinth#2:
@@ -200,7 +200,7 @@ ${
   }).join('\n')
 }
 +${
-  dstCharacter ? `+${thingHash(dstCharacter, characters.indexOf(dstCharacter))}:` : ''
+  dstCharacter ? `${thingHash(dstCharacter, characters.indexOf(dstCharacter))}:` : ''
 }
 Output:`;
 
