@@ -1,9 +1,9 @@
 import {murmurhash3} from './murmurhash3.js';
 
-const defaultPlayerName = 'Anon';
-const defaultPlayerBio = 'A new player. Not much is known about them.';
-const defaultObjectName = 'Thing';
-const defaultObjectDescription = 'A thing. Not much is known about it.';
+export const defaultPlayerName = 'Anon';
+export const defaultPlayerBio = 'A new player. Not much is known about them.';
+export const defaultObjectName = 'Thing';
+export const defaultObjectDescription = 'A thing. Not much is known about it.';
 
 // fairly shuffle the array
 const shuffleArray = array => {
@@ -21,7 +21,7 @@ const characterLore = `\
 
 AI anime avatars in a virtual world. They have human-level intelligence and unique and interesting personalities.
 `;
-const makeLorePrompt = ({
+export const makeLorePrompt = ({
   settings,
   characters,
   messages,
@@ -313,8 +313,8 @@ const parseLoreResponse = response => {
     return null;
   }
 };
-const makeLoreStop = (localCharacter, localCharacterIndex) => `\n+${thingHash(localCharacter, localCharacterIndex)}`;
-const postProcessResponse = (response, characters, dstCharacter) => {
+export const makeLoreStop = (localCharacter, localCharacterIndex) => `\n+${thingHash(localCharacter, localCharacterIndex)}`;
+export const postProcessResponse = (response, characters, dstCharacter) => {
   response = response.trim();
   // if (dstCharacter) {
   //   response = `+${thingHash(dstCharacter, characters.indexOf(dstCharacter))}: ${response}`;
@@ -323,7 +323,7 @@ const postProcessResponse = (response, characters, dstCharacter) => {
   // }
   return response;
 };
-const parseLoreResponses = response => response
+export const parseLoreResponses = response => response
   .split('\n')
   .map(s => parseLoreResponse(s))
   .filter(o => o !== null);
@@ -415,7 +415,7 @@ response: They really need to stop letting those things run around freely! They'
 prompt: Crunchy Apple
 response: The food is here really delicious! The apples are so crunchy, I bet they're made of pure sugar. They say it's really bad for you but it's irresistible.`,
 ]).join('\n\n')}`;
- const makeCommentPrompt = ({
+export const makeCommentPrompt = ({
   name,
   // age,
   // sex,
@@ -425,14 +425,14 @@ ${commentLore}
 prompt: ${name}
 response:`;
 };
- const makeCommentStop = () => {
+export const makeCommentStop = () => {
   return `\n\n`;
 };
- const parseCommentResponse = response => response.replace(/^ /, '');
+export const parseCommentResponse = response => response.replace(/^ /, '');
 
 
 
-/*  const makeCharacterIntroPrompt = ({
+/* export const makeCharacterIntroPrompt = ({
   name,
   gender,
 }) => {
@@ -535,8 +535,8 @@ Age/Sex: ${age}/${gender}
 Bio: ${bio}
 First scene monologue 1: "`;
 };
- const makeCharacterIntroStop = () => `"`;
- const parseCharacterIntroResponse = s => s; */
+export const makeCharacterIntroStop = () => `"`;
+export const parseCharacterIntroResponse = s => s; */
 
 
 
@@ -593,7 +593,7 @@ Hakui (11/M brain hacker. He can hack anyone's brain and make them do what he wa
 
 
 const _cleanName = name => JSON.stringify(name.replace(/[\_\-]+/g, ' ').replace(/\s+/g, ' '));
- const makeSelectTargetPrompt = ({
+export const makeSelectTargetPrompt = ({
   name,
   description,
 }) => {
@@ -701,13 +701,13 @@ response: "Swords are so cool! They're like the ultimate weapon. This one is up 
 
 prompt: ${_cleanName(name)}${description ? ` ${description}` : ''}\nresponse: "`;
 };
- const makeSelectTargetStop = () => `"`;
- const parseSelectTargetResponse = response => {
+export const makeSelectTargetStop = () => `"`;
+export const parseSelectTargetResponse = response => {
   const match = response.match(/\s*([^\n]*)/);
   return match ? match[1] : '';
 };
 
- const makeSelectCharacterPrompt = ({
+export const makeSelectCharacterPrompt = ({
   name,
   description,
 }) => {
@@ -770,8 +770,8 @@ response: "Yo Cloud! Can I borrow your sword?"`,
 
 prompt: ${_cleanName(name + ' (Character)')}${description ? ` ${description}` : ''}\nresponse: "`;
 };
- const makeSelectCharacterStop = () => `"`;
- const parseSelectCharacterResponse = response => {
+export const makeSelectCharacterStop = () => `"`;
+export const parseSelectCharacterResponse = response => {
   const match = response.match(/([^\n]*)/);
   const value = match ? match[1] : '';
   const done = !value;
@@ -781,7 +781,7 @@ prompt: ${_cleanName(name + ' (Character)')}${description ? ` ${description}` : 
   };
 };
 
- const makeBattleIntroductionPrompt = ({
+export const makeBattleIntroductionPrompt = ({
   name,
   bio,
 }) => {
@@ -832,8 +832,8 @@ Lightning: "I'm not afraid of you. Not even a little bit!"
 Squall: "Whatever. I'll just finish this and go."
 ${name}: "`;
 };
- const makeBattleIntroductionStop = () => `"`;
- const parseBattleIntroductionResponse = response => response;
+export const makeBattleIntroductionStop = () => `"`;
+export const parseBattleIntroductionResponse = response => response;
 
 // const actionsExamples = `\
 // Millie: Hey, have I seen you around before?"
@@ -940,7 +940,7 @@ Options for Jake:[No, I haven't seen your cat. (react =  headShake)], [Yes, I sa
 Jake: "No, I haven't seen your cat. (react = headShake)"
 Amy: "Well, if you see her can you let me know?  (react = normal)" *END*`;
 
- const makeChatPrompt = ({
+export const makeChatPrompt = ({
   // name,
   // bio,
   messages,
@@ -955,8 +955,8 @@ ${messages.map(message => {
 }).join('\n')}
 ${nextCharacter}: "`;
 };
- const makeChatStop = () => `\n`;
- const parseChatResponse = response => {
+export const makeChatStop = () => `\n`;
+export const parseChatResponse = response => {
   response = '"' + response;
 
   let match;
@@ -988,7 +988,7 @@ ${nextCharacter}: "`;
   
 };
 
- const makeOptionsPrompt = ({
+export const makeOptionsPrompt = ({
   // name,
   // bio,
   messages,
@@ -1002,8 +1002,8 @@ ${messages.map(message => {
 }).join('\n')}
 Options for ${nextCharacter}: [`;
 };
- const makeOptionsStop = () => `\n`;
- const parseOptionsResponse = response => {
+export const makeOptionsStop = () => `\n`;
+export const parseOptionsResponse = response => {
   response = '[' + response;
   
   const options = [];
@@ -1083,7 +1083,7 @@ Aesther (17/F AI Mechanic. She is looking for the ArcWeld, a mythical tool that 
 Oak (16/M environmental terrorist. He is looking to save the world, but his methods are...questionable.): I'm fighting for the right to spray paint. To show the world that we are here, and that we will not be silenced. We will make them listen, even if it means destroying everything they hold dear. (onselect: This is for the trees!)
 Hakui (11/M brain hacker. He can hack anyone's brain and make them do what he wants.): I can make you do anything I want. Just give me a few seconds with your mind, and I'll have you eating out of the palm of my hand. (onselect: Note, I did not wash my hands.)`;
 
- const makeCharacterIntroPrompt = ({
+export const makeCharacterIntroPrompt = ({
   name,
   bio,
 }) => {
@@ -1091,8 +1091,8 @@ Hakui (11/M brain hacker. He can hack anyone's brain and make them do what he wa
 ${characterIntroLore}
 ${name}${bio ? ` (${bio})` : ''}:`;
 };
- const makeCharacterIntroStop = () => `\n`;
- const parseCharacterIntroResponse = response => {
+export const makeCharacterIntroStop = () => `\n`;
+export const parseCharacterIntroResponse = response => {
   response = response.replace(/^ /, '');
   const match = response.match(/^(.*)\s+\(onselect:\s+(.*)\)$/);
 
