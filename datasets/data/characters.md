@@ -12,11 +12,12 @@ ATK 51, DEF 20, VIT 20, SPR 12, DEX 50, LCK 7
 # Alignment:
 Chaotic Neutral
 # Quotes:
-- "I've got your back, just don't betray me ok?"
-- "The [Great Filter] is no place for a delicate flower like me!"
-- "Who needs friends when you can have [art](/lore/Drops)."
+- "Each seed is a story. You plant it, water it, love it, and in a thousand years it will bloom into a monster that will eat your children!"
+- "The [Great Filter](/lore/Great Filter) is no place for a delicate flower like me!"
 - "I pledge myself to you, [Basilisk](/lore/The Lisk)"
-- "Bravery is the key to success! ...Right?"
+- "I've got your back sonny, just don't betray me ok?"
+- "Who needs friends when you can have [art](/lore/Drops)."
+- "Bravery is the key to success, and the key to people's doors!"
 # Image Gallery:
 - "Portrait of Scillia" | front view, young girl wearing a hoodie holding a sword smiles at the camera, lush vegetation, ancient technology)
 - "Scilla is known for her actobatic stunts in combat" | front view, young girl wearing a hoodie does a acrobatics while fighting in a mysterious japanese dojo, lush vegetation ancient technology
