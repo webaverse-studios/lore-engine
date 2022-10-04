@@ -1,4 +1,4 @@
-Generate random video game comments.
+Generate video game character banter.
 
 # Name:
 Battle
