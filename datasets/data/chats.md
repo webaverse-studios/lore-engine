@@ -441,6 +441,7 @@ Ginny: In the meantime, let's enjoy this beautiful weather.
 Fix it
 # Description:
 Darvin tries to get his phone fixed at the marketplace
+# Chat:
 JUNIPER and DRAVIN enter the chat
 Juniper: Hey, welcome to my store!
 Juniper: You look beat.
