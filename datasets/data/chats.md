@@ -1,8 +1,10 @@
 Generate 50 Twitter-like chat transcripts between video game characters.
 
-Name: Potion ingredients
-Description: Scillia asks Drake for some illegal potion ingredients.
-Chat:
+# Name:
+Potion ingredients
+# Description:
+Scillia asks Drake for some illegal potion ingredients.
+# Chat:
 SCILLIA and DRAKE ENTER the chat
 Scillia: I need something from you.
 Drake: What is it?
@@ -25,9 +27,11 @@ Drake: I won't ask...
 Scillia: Better not.
 Scillia: Thanks, Drake!
 
-Name: Party invite
-Description: Hyacinth invites Anemone to the party, but she doesn't want to.
-Chat:
+# Name:
+Party invite
+# Description:
+Hyacinth invites Anemone to the party, but she doesn't want to.
+# Chat:
 HYACINTH and ANEMONE ENTER the chat
 Hyacinth: Are you going to the party?
 Anemone: No way jose.
@@ -45,8 +49,9 @@ Hyacinth: I need you to keep an eye on Drake.
 Hyacinth: He's going to cause trouble if you don't.
 Anemone: Ok, I'll go.
 
-Name: Finding Piper
-Chat: Scillia tries to find Piper by asking Gasper Garland, the King of Harmon.
+# Name:
+Finding Piper
+# Chat: Scillia tries to find Piper by asking Gasper Garland, the King of Harmon.
 GARLAND and SCILLIA ENTER the chat
 Scillia: Gasper Old Man, did you see a Breezy GL Junglist pass by?
 Gasper: I don't know you kids are saying half the time.
@@ -66,11 +71,12 @@ Gasper: Your majesty.
 SCILLIA LEAVES the CHAT
 
 Type: Chat
-Name: Strange fruit
-Description: Piper and Joji find a strange fruit, Piper eats it, and hilarity ensues.
-Chat:
+# Name:
+Strange fruit
+# Description:
+Piper and Joji find a strange fruit, Piper eats it, and hilarity ensues.
+# Chat:
 PIPER and JOJI ENTER the chat
-Chat:
 Piper: Do you see that?
 PIPER SENDS an image of "a strange alien fruit"
 Joji: What?
@@ -96,10 +102,12 @@ Piper: I'm going to be sick and you'll have to carry me.
 Joji: ...
 
 Type: Chat
-Name: Secret text
-Description: Anemone and Lilith talk about a rumor.
+# Name:
+Secret text
+# Description:
+Anemone and Lilith talk about a rumor.
+# Chat:
 ANN and LILITH ENTER the chat
-Chat:
 Ann: Are you there?
 ANN SENDS an image of "a young witch girl stands on top of a skyscraper in a lush ancient technology landscape"
 Lilith: Yeah, what's up?
@@ -131,9 +139,11 @@ Lilith: Just don't get killed!
 Ann: Ok.
 
 Type: Chat
-Name: What do you want to be?
-Description: Spicer and Piper talk about what they will do after graduation.
-Chat:
+# Name:
+What do you want to be?
+# Description:
+Spicer and Piper talk about what they will do after graduation.
+# Chat:
 SPICER and PIPER ENTER the chat
 Spicer: Have you decided what you're going to do when you're out of school?
 Piper: No, I haven't.
@@ -158,9 +168,11 @@ Piper: Aww, that's sweet.
 Piper: I'll think about it, okay?
 
 Type: Chat
-Name: A lofty favor
-Description: Zex asks for a bunch of money from his friend Darvien
-Chat:
+# Name:
+A lofty favor
+# Description:
+Zex asks for a bunch of money from his friend Darvien
+# Chat:
 DARVIEN and ZEX ENTER the chat
 Darvien: What's up?
 Zex: I need a favor.
@@ -194,9 +206,11 @@ Zex: Thanks, Darvien.
 Zex: I won't let you down.
 
 Type: Chat
-Name: Cat girl fields
-Description: Walking through the forest, Gasper and Joujire discuss life
-Chat:
+# Name:
+Cat girl fields
+# Description:
+Walking through the forest, Gasper and Joujire discuss life
+# Chat:
 GASPER and JOUJIRE ENTER the chat
 Gasper: Have you ever just laid down and smelled the grass here?
 GASPER SENDS an IMAGE of "a man lays down and smells the grass in a lush vegetation landscape"
@@ -219,9 +233,11 @@ Gasper: Which is Catgirls and Doggirls!
 Joujire: I think you've been sniffing a bit too many roses.
 
 Type: Chat
-Name: Gearing up
-Description: Luna and Ravager get ready for their helicopter raid on the Cyrrynx Corporation.
-Chat:
+# Name:
+Gearing up
+# Description:
+Luna and Ravager get ready for their helicopter raid on the Cyrrynx Corporation.
+# Chat:
 LUNA and RAVAGER ENTER the chat
 Raveger: Is it just us two today?
 Luna: No, I think Tortem is coming too.
@@ -258,8 +274,9 @@ TORTEM SENDS an image of "three people with helmets, swords and guns board the h
 Tortem: See you on the other side, friend.
 
 Type: Chat
-Name: Lesson 03
-Description: Three students in class get a lesson from the teacher.
+# Name:
+Lesson 03
+# Description:
 HORTIGREAVE, YUNI, SAYU, and PINKER enter the CHAT
 Hortigreave: Ok class, today we'll be learning about the different kinds of demons you might encounter.
 Hortigreave: Demons are different from normal Mobs.
@@ -297,9 +314,11 @@ Sayu: You should have kept your mouth shut, Yuni.
 SAYU EMOTES SAD
 
 Type: Chat
-Name: Basement potion brewing
-Description: The Black Link Coven tries to brew a luck potion
-Chat:
+# Name:
+Basement potion brewing
+# Description:
+The Black Link Coven tries to brew a luck potion
+# Chat:
 ESVEN, ANEMONE, LILITH, and JESEPHONE enter the CHAT
 Esven: Ok, I think we're all here.
 Anemone: Let's get started.
@@ -328,9 +347,11 @@ Lilith: This should be cake.
 Jesephone: If you say so...
 
 Type: Chat
-Name: Permission to be friends
-Description: Zex tries to trick Jersephone into getting Darvien's contact info
-Chat:
+# Name:
+Permission to be friends
+# Description:
+Zex tries to trick Jersephone into getting Darvien's contact info
+# Chat:
 ZEX and JERSEPHONE ENTER the chat
 Zex: Hey can you add Sayu?
 Jersephone: Why?
@@ -379,9 +400,11 @@ DARVIEN LEAVES the chat
 Zex: I guess I'm not cool enough.
 Zex: Oh well.
 
-Name: Flora and fauna
-Description: Ginny and Jorpian admire the nature in the scene
-Chat:
+# Name:
+Flora and fauna
+# Description:
+Ginny and Jorpian admire the nature in the scene
+# Chat:
 GINNY and JORPIAN ENTER the chat
 Ginny: What do you think of the Sorns?
 Jorpain: What's that?
@@ -414,8 +437,10 @@ Ginny: Yeah, I've only ever seen one.
 Ginny: Maybe we'll get lucky today.
 Ginny: In the meantime, let's enjoy this beautiful weather.
 
-Type: Chat
-Description: Darvin tries to get his phone fixed at the marketplace
+# Name
+Fix it
+# Description:
+Darvin tries to get his phone fixed at the marketplace
 JUNIPER and DRAVIN enter the chat
 Juniper: Hey, welcome to my store!
 Juniper: You look beat.
@@ -448,9 +473,11 @@ YURI LEAVES the chat
 Juniper: Don't mind her...
 Juniper: Buy something!
 
-Name: Time off
-Description: Scillia makes up an excuse for being away from work 
-Chat:
+# Name:
+Time off
+# Description:
+Scillia makes up an excuse for being away from work 
+# Chat:
 Armodar: You taking tomorrow off?
 Scillia: Sir, for my birthday, sir. My sister, she insisted on it.
 Armodar: Thirteen, huh? Maybe it's a good time to send off that letter of recommendation for officer training.
@@ -459,9 +486,11 @@ Armodar: You're past due for a promotion, Scillia. Think of your sister, and you
 Scillia: Out of Citadel business, you mean.
 Armodar: Yeah. Nothing good will come of it. Nothing but grief.
 
-Name: Job meeting
-Description: Espric and Wizzy meet Drake.
-Chat:
+# Name:
+Job meeting
+# Description:
+Espric and Wizzy meet Drake.
+# Chat:
 DRAKE and AUGER ENTER the chat
 Auger: C'mon noob.
 Auger: Follow me.

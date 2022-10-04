@@ -1,9 +1,12 @@
 Generate random fighting video game taunts.
 
-Name: Battle
-Description: Battle taunt
-Character: Scillia Doge
-Banters:
+# Name
+Battle
+# Description
+Battle taunt
+# Character:
+Scillia Doge
+# Banters:
 - This looks like a big one! I've only killed a few hundred so far.
 - You call that a sword? I guess it is a sword, but mine's better.
 - I'm gonna beat you, but let's be friends after this.
@@ -25,10 +28,13 @@ Banters:
 - You can't win if you don't play the game.
 - This is a great day for the history books, if you catch me.
 
-Name: Battle
-Description: Battle taunt
-Character: Anemone Wall
-Banters:
+# Name
+Battle
+# Description
+Battle taunt
+# Character:
+Anemone Wall
+# Banters:
 - Alakazoo! That's not a real spell but I thought it would freak you out.
 - How do you expect to hit me when you can't even see me?
 - Magic isn't cheating, it's improving the odds in your favor.
@@ -44,10 +50,13 @@ Banters:
 - I've got a plan, you've got a plan, we're all gonna die. Let's go.
 - You can't kill what's already killed.
 
-Name: Battle
-Description: Battle taunt
-Character: Buster the Robit
-Banters:
+# Name
+Battle
+# Description
+Battle taunt
+# Character:
+Buster the Robit
+# Banters:
 - Come on, can't we all just get along?
 - Two swords, one enemy. It's a tough decision.
 - You know what they call a robot with no power?
@@ -59,10 +68,13 @@ Banters:
 - The best swords are made with love, care, and salt.
 - You're a lot of fun to fight, you know that?
 
-Name: Battle
-Description: Battle taunt
-Character: Hyacinth Flowers
-Banters:
+# Name
+Battle
+# Description
+Battle taunt
+# Character:
+Hyacinth Flowers
+# Banters:
 - Smile for your death certificate!
 - If you can't dazzle them with brilliance, baffle them with bullshit!
 - I know this is a dumb question, but... how are you still alive?
@@ -75,10 +87,13 @@ Banters:
 - I'm gonna need a huge check to clean this up.
 - You're like a puppy I want to hit with a stick.
 
-Name: Battle
-Description: Battle taunt
-Character: Drake Silkbourne
-Banters:
+# Name
+Battle
+# Description
+Battle taunt
+# Character:
+Drake Silkbourne
+# Banters:
 - You can quit now or you can be vaporized.
 - You can run but you can't hide. Or else I can't hit you.
 - Can't you see I'm busy?
