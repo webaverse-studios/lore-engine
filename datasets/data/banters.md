@@ -1,7 +1,7 @@
 Generate random fighting video game taunts.
 
 Name: Battle
-Description: Battle taunts
+Description: Battle taunt
 Character: Scillia Doge
 Banters:
 - This looks like a big one! I've only killed a few hundred so far.
@@ -26,7 +26,7 @@ Banters:
 - This is a great day for the history books, if you catch me.
 
 Name: Battle
-Description: Battle taunts
+Description: Battle taunt
 Character: Anemone Wall
 Banters:
 - Alakazoo! That's not a real spell but I thought it would freak you out.
@@ -45,7 +45,7 @@ Banters:
 - You can't kill what's already killed.
 
 Name: Battle
-Description: Battle taunts
+Description: Battle taunt
 Character: Buster the Robit
 Banters:
 - Come on, can't we all just get along?
@@ -60,7 +60,7 @@ Banters:
 - You're a lot of fun to fight, you know that?
 
 Name: Battle
-Description: Battle taunts
+Description: Battle taunt
 Character: Hyacinth Flowers
 Banters:
 - Smile for your death certificate!
@@ -76,7 +76,7 @@ Banters:
 - You're like a puppy I want to hit with a stick.
 
 Name: Battle
-Description: Battle taunts
+Description: Battle taunt
 Character: Drake Silkbourne
 Banters:
 - You can quit now or you can be vaporized.
