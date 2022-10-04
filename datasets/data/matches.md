@@ -242,7 +242,7 @@ Sake" An alcoholic beverage.
 
 @@Match string:
 "happy"
-@@Candiate assets:
+@@Candidate assets:
 - "Rocket_01" A large rocket that can be programmed to fly anywhere.
 - "Fruit" Delicious fruit that heals the user.
 - "Fairy" Small white glowing fairy.
@@ -252,7 +252,7 @@ Sake" An alcoholic beverage.
 
 @@Match string:
 "consumable"
-@@Candiate assets:
+@@Candidate assets:
 - "Dagger" A black dagger that looks like it is made of obsidian.
 - "Tunic_black" A black furry tunic made out of animal fur.
 - "Juggernaut": An enormous spaceship with many weapons.
@@ -262,7 +262,7 @@ Sake" An alcoholic beverage.
 
 @@Match string:
 "fantasy"
-@@Candiate assets:
+@@Candidate assets:
 - "Scarf_green" A green scarf made out of a nylon material.
 - "Backpack_01": A cute animal backpack with ears. 
 - "Frame Sword": A sword with a blade made of curved fire.
