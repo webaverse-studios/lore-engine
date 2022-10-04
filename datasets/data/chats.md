@@ -70,7 +70,6 @@ Gasper: You're welcome.
 Gasper: Your majesty.
 SCILLIA LEAVES the CHAT
 
-Type: Chat
 # Name:
 Strange fruit
 # Description:
@@ -101,7 +100,6 @@ Piper: You know I don't listen.
 Piper: I'm going to be sick and you'll have to carry me.
 Joji: ...
 
-Type: Chat
 # Name:
 Secret text
 # Description:
@@ -138,7 +136,6 @@ LILITH EMOTES HAPPY
 Lilith: Just don't get killed!
 Ann: Ok.
 
-Type: Chat
 # Name:
 What do you want to be?
 # Description:
@@ -167,7 +164,6 @@ Spicer: I thought you could be my first customer.
 Piper: Aww, that's sweet.
 Piper: I'll think about it, okay?
 
-Type: Chat
 # Name:
 A lofty favor
 # Description:
@@ -205,7 +201,6 @@ DARVIEN SENDS an image of "a bag of money"
 Zex: Thanks, Darvien.
 Zex: I won't let you down.
 
-Type: Chat
 # Name:
 Cat girl fields
 # Description:
@@ -232,7 +227,6 @@ Gasper: I think you are missing the central point here.
 Gasper: Which is Catgirls and Doggirls!
 Joujire: I think you've been sniffing a bit too many roses.
 
-Type: Chat
 # Name:
 Gearing up
 # Description:
@@ -273,7 +267,6 @@ Totem: Yeah, let's gooo!
 TORTEM SENDS an image of "three people with helmets, swords and guns board the helicopter"
 Tortem: See you on the other side, friend.
 
-Type: Chat
 # Name:
 Lesson 03
 # Description:
@@ -313,7 +306,6 @@ YUNI EMOTES SAD
 Sayu: You should have kept your mouth shut, Yuni.
 SAYU EMOTES SAD
 
-Type: Chat
 # Name:
 Basement potion brewing
 # Description:
@@ -346,7 +338,6 @@ Lilith: The Black Link Coven.
 Lilith: This should be cake.
 Jesephone: If you say so...
 
-Type: Chat
 # Name:
 Permission to be friends
 # Description:
