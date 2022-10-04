@@ -378,8 +378,7 @@ He tries to avoid [Ann](/characters/Anemone Wall), as he finds her [magic](/lore
 # Name:
 Sayu Mikasa
 # Description:
-Sayu is a 12/F [Drop Hunter](/lore/Drop Hunters) from Zone 0. Unlike most Drop Hunters, she isn't competitive, and doesn't raid [Drop Storms](/lore/Drop Storm) to fight over the [loot](/lore/Drops). Instead, she prefers to hunt through the [Great Filters](/lore/Great Filter) herself, using here keen sense of smell and Gaia Summoner abilities to locate the drops that other Hunters have missed. While her methods are often considered unorthodox, her ability to find hidden treasures has earned her a small, but loyal [following of Hunters](/lore/Royal Greeners) who prefer to hunt alone, thought they like to meet to exchange tips.
-Sayu is on the Hunt to cure her father's [Stonelock](/lore/Stonelock), as although there is no cure for Stonelock, it is said the first person to make it up [The Street](/lore/The Street) will have a wish granted.
+Sayu is a 12/F [Drop Hunter](/lore/Drop Hunters) from Zone 0. Sayu is on the Hunt to cure her father's [Stonelock](/lore/Stonelock). Although there is no cure for Stonelock, it is said the first person to make it up [The Street](/lore/The Street) will have a wish granted.
 In [battle](/lore/Battle), Sayu specializes in long range magic, especially [devastating single target spells](/items/Siever's Curse), [control](/items/Brain Rip) and [kiting](/items/Siren Flower). She is also good at support with her [healing magic](/items/Mend) and [buffing](/items/Hype). Although physically very weak, her magic stats are very high.
 # Class:
 Gaia Summoner
@@ -409,7 +408,9 @@ ATK 20, DEF 12, VIT 9, SPR 81, DEX 73, LCK 5
 - [Minmax](/abilities/Minmax)
 # Limit Break:
 **Wisp Form** Grants Sayu invincibility and flight for a short period of time. While in this form, Sayu can only perform melee attacks.
-# Biography
+# Biography:
+Unlike most Drop Hunters, Sayu isn't competitive, and doesn't raid [Drop Storms](/lore/Drop Storm) to fight over the [loot](/lore/Drops). Instead, she prefers to hunt through the [Great Filters](/lore/Great Filter) herself, using here keen sense of smell and Gaia Summoner abilities to locate the drops that other Hunters have missed.
+While her methods are often considered unorthodox, her ability to find hidden treasures has earned her a small, but loyal [following of Hunters](/lore/Royal Greeners) who prefer to hunt alone, thought they like to meet to exchange tips.
 # Appearance
 Sayu has green hair in pigtails. She wears a black dress and a pink backpack. She usually travels with her pet [Gaia Dog](/lore/Gaia Dogs), which is twice her size.
 Although she looks around 10 years old, Sayu is actually 12, and is both short and wicked smart for her age. This lets her get her way with a lot of people who assume she is young and naive.
