@@ -8,12 +8,12 @@ The landscape is lush and turns neon at night, when all of the plants glow and r
 # Biome:
 City
 # Image Gallery:
-- [Aki Hirohito, the founder of Nihon City](White Samurai standing on the sakura street)
-- [Nihon city has free transportation to everywhere](Jungle train railway on the side of a high tech lush skyscraper)
-- [The Citadel is the central feature of Nihon City](White tower in the clouds, with waterfalls and plants growing on it)
-- [At night, the city comes alive with its vegetation turning to holograms](Holographic magical plants in the city at night)
-- [Every month, there is a lantern festival to bring in the next part of the year](Japanese lantern festival. Lotus flowers, paper lanterns, and kimono.)
-- [The Citadel is a highly rated school, and is well respected throughout the Street](Students with high tech swords and wizard clothes in school uniforms walking down the sakura street.)
+- "Aki Hirohito, the founder of Nihon City " | White Samurai standing on the sakura street
+- "Nihon city has free transportation to everywhere" | Jungle train railway on the side of a high tech lush skyscraper
+- "The Citadel is the central feature of Nihon City" | White tower in the clouds, with waterfalls and plants growing on it
+- "At night, the city comes alive with its vegetation turning to holograms" | Holographic magical plants in the city at night
+- "Every month, there is a lantern festival to bring in the next part of the year" | Japanese lantern festival. Lotus flowers, paper lanterns, and kimono.
+- "The Citadel is a highly rated school, and is well respected throughout the Street" | Students with high tech swords and wizard clothes in school uniforms walking down the sakura street.
 
 # Name:
 The Shadow Realm
@@ -22,11 +22,11 @@ Dark and foreboding place where lost souls go. Unlike the common misconception, 
 # Biome:
 Dark
 # Image Gallery:
-- [The Shadow Realm is covered by a permanent Ghost Fog](Dark purple fog surrounding a city)
-- [Many cartoon shows have been made about The Shadow Realm](Cartoon ghosts escaping from a spooky science laboratory)
-- [Mortis School is the only school in The Shadow Realm](Wizard in a dark robe standing in a dark room with a dark background)
-- [Plants brought to the Shadow Realm become instantly poisonous](Plant with purple toxic berries growing in a dark cave)
-- [The only source of light is from the City of Lights](Dark city with a single light from a street lamp)
+- "The Shadow Realm is covered by a permanent Ghost Fog" | Dark purple fog surrounding a city)
+- "Many cartoon shows have been made about The Shadow Realm" | Cartoon ghosts escaping from a spooky science laboratory)
+- "Mortis School is the only school in The Shadow Realm" | Wizard in a dark robe standing in a dark room with a dark background)
+- "Plants brought to the Shadow Realm become instantly poisonous" | Plant with purple toxic berries growing in a dark cave)
+- "The only source of light is from the City of Lights" | Dark city with a single light from a street lamp)
 
 # Name:
 The Lost Woods
@@ -35,11 +35,11 @@ Mystical forest where it is said that if you get lost, you will never find your 
 # Biome:
 Forest
 # Image Gallery:
-- [The lost woods have a single path through, but the road is winding.](A single path through a forest of leafy trees)
-- [The entire forest is full of magical creatures](Magical creature in a forest creek)
-- [Ores are common, but tend to be well hidden under the grass](Ore vein under the grass of a lush vegetation forest)
-- [Dangerous mobs live in the deep parts of the forest, so it's best to equip yourself for battle](Girl with a large sword battles an ancient creature, lush vegetation)
-- [There is a portal in the center of the forest that leads to the Citadel](White tower with a blue portal in the center of a forest)
+- "The lost woods have a single path through, but the road is winding" | A single path through a forest of leafy trees)
+- "The entire forest is full of magical creatures" | Magical creature in a forest creek)
+- "Ores are common, but tend to be well hidden under the grass" | Ore vein under the grass of a lush vegetation forest)
+- "Dangerous mobs live in the deep parts of the forest, so it's best to equip yourself for battle" | Girl with a large sword battles an ancient creature, lush vegetation
+- "There is a portal in the center of the forest that leads to the Citadel" | White tower with a blue portal in the center of a forest
 
 # Name:
 The Ice Kingdom
