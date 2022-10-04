@@ -1,8 +1,8 @@
-Generate random fighting video game taunts.
+Generate random video game comments.
 
-# Name
+# Name:
 Battle
-# Description
+# Description:
 Battle taunt
 # Character:
 Scillia Doge
@@ -28,9 +28,9 @@ Scillia Doge
 - You can't win if you don't play the game.
 - This is a great day for the history books, if you catch me.
 
-# Name
+# Name:
 Battle
-# Description
+# Description:
 Battle taunt
 # Character:
 Anemone Wall
@@ -50,9 +50,9 @@ Anemone Wall
 - I've got a plan, you've got a plan, we're all gonna die. Let's go.
 - You can't kill what's already killed.
 
-# Name
+# Name:
 Battle
-# Description
+# Description:
 Battle taunt
 # Character:
 Buster the Robit
@@ -68,9 +68,9 @@ Buster the Robit
 - The best swords are made with love, care, and salt.
 - You're a lot of fun to fight, you know that?
 
-# Name
+# Name:
 Battle
-# Description
+# Description:
 Battle taunt
 # Character:
 Hyacinth Flowers
@@ -87,9 +87,9 @@ Hyacinth Flowers
 - I'm gonna need a huge check to clean this up.
 - You're like a puppy I want to hit with a stick.
 
-# Name
+# Name:
 Battle
-# Description
+# Description:
 Battle taunt
 # Character:
 Drake Silkbourne
