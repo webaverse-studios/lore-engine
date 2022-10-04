@@ -8,7 +8,7 @@ The landscape is lush and turns neon at night, when all of the plants glow and r
 # Biome:
 City
 # Image Gallery:
-- "Aki Hirohito, the founder of Nihon City " | White Samurai standing on the sakura street
+- "Aki Hirohito, the founder of Nihon City" | White Samurai standing on the sakura street
 - "Nihon city has free transportation to everywhere" | Jungle train railway on the side of a high tech lush skyscraper
 - "The Citadel is the central feature of Nihon City" | White tower in the clouds, with waterfalls and plants growing on it
 - "At night, the city comes alive with its vegetation turning to holograms" | Holographic magical plants in the city at night
