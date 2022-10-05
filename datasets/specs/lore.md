@@ -1,6 +1,7 @@
 Generate 50 video game lore pages.
 
 @Type: lore
+@Image Prompt: anime style video game concept art, screenshot
 ## Name:
 Name of the lore entry
 ## Description:

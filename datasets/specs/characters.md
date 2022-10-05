@@ -1,6 +1,7 @@
 Generate 50 video game RPG NPC characters.
 
 @Type: character
+@Image Prompt: anime style video game character concept, full body
 ## Name:
 Character's full name
 ## Description:

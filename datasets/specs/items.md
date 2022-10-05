@@ -14,6 +14,7 @@ WHITE = Air/Happiness
 BLACK = Earth/Anger
 
 @Type: item
+@Image Prompt: video game item concept art render
 ## Name:
 Name of the item
 ## Description:

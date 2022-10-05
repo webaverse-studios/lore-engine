@@ -1,6 +1,7 @@
 Generate 50 anime RPG video game locations.
 
 @Type: setting
+@Image Prompt: anime style video game location concept art, screenshot
 ## Name:
 Name of the location
 ## Description:
