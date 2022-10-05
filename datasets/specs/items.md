@@ -13,6 +13,7 @@ BLUE = Water/Intelligence
 WHITE = Air/Happiness
 BLACK = Earth/Anger
 
+@Type: item
 ## Name:
 Name of the item
 ## Description:
