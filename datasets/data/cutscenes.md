@@ -1,10 +1,10 @@
 Generate 50 RPG video game RPG cutscenes, in the form of movie scripts.
 
-@@Name:
+## Name:
 First test
-@@Description:
+## Description:
 Introduction to Scillia and Buster as they are sparring.
-@@Script:
+## Script:
 AN ANIME-STYLE SKY
 The camera pans down to reveal a FLOATING ISLAND with a lush, ancient technology HOUSE on top.
 SCILLIA, a girl wearing a green hoodie points her SILSWORD at BUSTER, a tall anthropomorphic rabbit
@@ -34,11 +34,11 @@ Morpher: Pack it in!
 SCILLIA, BUSTER, HYACINTH, and MORPHER head into the HOUSE.
 Summary: A human girl and a tall anthropomorphic rabbit spar with swords on a floating island with a lush ancient technology house on it.
 
-@@Name:
+## Name:
 Clothes shopping
-@@Description:
+## Description:
 Boris and his niece Li go clothes shopping
-@@Script:
+## Script:
 AKI MARKET, a solarpunk bazaar of storefronts, is full of people shopping and catching up.
 BORIS, a tall man in a a business suit, is walking through the market with Li, a small fox girl.
 Boris: Li, come on, we're gonna be late!
