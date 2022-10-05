@@ -1,5 +1,6 @@
 Match RPG video game asset descriptions to the prompt given.
 
+@Type: match
 ## Candidate assets:
 - List of asset choices
 ## Match string:

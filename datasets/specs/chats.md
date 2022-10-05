@@ -1,5 +1,6 @@
 Generate 50 Twitter-like chat transcripts between video game characters.
 
+@Type: chat
 ## Name:
 Name of the item
 ## Description:

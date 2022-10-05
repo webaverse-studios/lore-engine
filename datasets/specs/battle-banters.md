@@ -1,5 +1,6 @@
 Generate video game character banter.
 
+@Type: battle-banter
 ## Name:
 Character's full name
 ## Description:

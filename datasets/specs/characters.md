@@ -1,5 +1,6 @@
 Generate 50 video game RPG NPC characters.
 
+@Type: character
 ## Name:
 Character's full name
 ## Description:

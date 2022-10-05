@@ -1,5 +1,6 @@
 Generate 50 anime RPG video game locations.
 
+@Type: setting
 ## Name:
 Name of the location
 ## Description:
