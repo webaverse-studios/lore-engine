@@ -1,5 +1,3 @@
-Match RPG video game asset descriptions to the prompt given.
-
 ## Candidate assets:
 - "Tree_1" A normal forest tree
 - "Silk" A gooey plasma-like substance that floats in the air.

@@ -1,5 +1,3 @@
-Generate 50 Twitter-like chat transcripts between video game characters.
-
 ## Name:
 Potion ingredients
 ## Description:

@@ -1,5 +1,3 @@
-Generate 50 anime RPG video game locations.
-
 ## Name:
 Nihon City
 ## Description:

@@ -1,5 +1,3 @@
-Generate 50 video game lore pages.
-
 ## Name:
 The Street
 ## Description:

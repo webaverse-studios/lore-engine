@@ -1,11 +1,7 @@
-Generate video game character banter.
-
 ## Name:
-Battle
-## Description:
-Battle taunt
-## Character:
 Scillia Doge
+## Description:
+13/F Drop Hunter
 ## Banters:
 - This looks like a big one! I've only killed a few hundred so far.
 - You call that a sword? I guess it is a sword, but mine's better.
@@ -29,11 +25,9 @@ Scillia Doge
 - This is a great day for the history books, if you catch me.
 
 ## Name:
-Battle
-## Description:
-Battle taunt
-## Character:
 Anemone Wall
+## Description:
+13/F Lisk Witch
 ## Banters:
 - Alakazoo! That's not a real spell but I thought it would freak you out.
 - How do you expect to hit me when you can't even see me?
@@ -51,11 +45,9 @@ Anemone Wall
 - You can't kill what's already killed.
 
 ## Name:
-Battle
-## Description:
-Battle taunt
-## Character:
 Buster the Robit
+## Description:
+16/M Anthropomorphic Rabbit Robot
 ## Banters:
 - Come on, can't we all just get along?
 - Two swords, one enemy. It's a tough decision.
@@ -69,11 +61,9 @@ Buster the Robit
 - You're a lot of fun to fight, you know that?
 
 ## Name:
-Battle
-## Description:
-Battle taunt
-## Character:
 Hyacinth Flowers
+## Description:
+15/F Beast Tamer
 ## Banters:
 - Smile for your death certificate!
 - If you can't dazzle them with brilliance, baffle them with bullshit!
@@ -88,11 +78,9 @@ Hyacinth Flowers
 - You're like a puppy I want to hit with a stick.
 
 ## Name:
-Battle
-## Description:
-Battle taunt
-## Character:
 Drake Silkbourne
+## Description:
+15/M Neural Gunner
 ## Banters:
 - You can quit now or you can be vaporized.
 - You can run but you can't hide. Or else I can't hit you.

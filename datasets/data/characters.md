@@ -1,5 +1,3 @@
-Generate 50 video game RPG NPC characters.
-
 ## Name:
 Scillia Doge
 ## Description:
