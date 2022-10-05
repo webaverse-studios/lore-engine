@@ -199,7 +199,7 @@ Potion
 ## Description:
 Glass bottle filled with a glowing magical liquid. There are many different kinds of potions, each with a different effect. Some restore HP, some give you buffs, some are used for cooking, and some are just for show. Be careful not to drink a poison potion by mistake!
 ## Image:
-![glowing magic potion in a jar, cartoon style]()
+![glowing magic potion in a jar]()
 ## Stats:
 ATK 0, DEF 0, VIT 0, SPR 20, DEX 20, LCK 5
 ## Decomposition:
@@ -210,9 +210,9 @@ RED 0, GREEN 5, BLUE 25, WHITE 0, BLACK 0
 ## Name:
 Stimulant
 ## Description:
-An unrefined powdered substance that can be consumed for powerful effects. In low does, it increases stats, but at high doses has random effects which can be crippling. It can be found in the wild, and can be refined into potions to better control its effects.
+An unrefined substance that can be consumed for powerful effects. In low does, it increases stats, but at high doses has random effects which can be crippling. It can be found in the wild, and can be refined into potions to better control its effects.
 ## Image:
-![strange white candy in a paper wrapper, cartoon style, white background]()
+![strange substance in a small vial, white background]()
 ## Stats:
 ATK 0, DEF 10, VIT 10, SPR 10, DEX 10, LCK 30
 ## Decomposition:
@@ -290,7 +290,7 @@ Jetpack
 ## Description:
 Personal jetpack that can be equipped to give you the ability to fly for a short period of time, but is very loud and will attract attention. It can be used in combat to dodge enemy attacks or get to high places, but it is not very durable and will break and explode if it takes too much damage.
 @Image:
-cyberpunk style jetpack backpack with wings
+![cyberpunk style jetpack backpack with wings]()
 ## Stats:
 ATK -5, DEF 20, VIT 0, SPR 0, DEX 20, LCK -5
 ## Decomposition:
@@ -302,8 +302,8 @@ RED 10, GREEN 0, BLUE 20, WHITE 5, BLACK 5
 Fruit
 ## Description:
 Restores HP and MP when eaten. Can be found in the wild or grown in gardens. Each fruit has a different effect. Some make you stronger, some make you faster, and some make you more magical.
-@Image:
-tasty alien fruit from a video game
+## Image:
+![tasty alien fruit from a video game]()
 ## Stats:
 ATK 0, DEF 0, VIT 10, SPR 10, DEX 0, LCK 5
 ## Decomposition:
@@ -315,8 +315,8 @@ RED 0, GREEN 10, BLUE 0, WHITE 2, BLACK 0
 Magicite
 ## Description:
 A stone imbued with magical power. It can be used to cast spells or make potions. It is a rare item, and can be found in chests or as a reward for defeating certain enemies.
-@Image:
-magical crystal with something glowing inside
+## Image:
+![magical crystal with something glowing inside]()
 ## Stats:
 ATK 0, DEF 0, VIT 50, SPR 50, DEX 0, LCK 20
 ## Decomposition:
