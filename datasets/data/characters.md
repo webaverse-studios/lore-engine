@@ -19,13 +19,13 @@ Chaotic Neutral
 - "Who needs friends when you can have [art](/lore/Drops)."
 - "Bravery is the key to success, and the key to people's doors!"
 ## Image Gallery:
-- "Portrait of Scillia" | front view, young girl wearing a hoodie holding a sword smiles at the camera, lush vegetation, ancient technology)
-- "Scilla is known for her actobatic stunts in combat" | front view, young girl wearing a hoodie does a acrobatics while fighting in a mysterious japanese dojo, lush vegetation ancient technology
-- "Much of Scillia's time is spent hunting for drops in the Great Filters" | front view, young girl wearing a hoodie smiles at the camera, running through a dangerous mysterious forest, lush vegetation, ancient technology
-- "Scillia likes creating strange concoctions to help in her drop hunts" | young girl wearing a hoodie smiles at the camera, brewing a mysterious magical potion in the library
-- "Scillia likes to stand on top of rooftops because it makes her look cool" | back view, young girl wearing a hoodie standing on a solarpunk skyscraper, looking down on the city, lush vegetation, ancient technology
-- "Scillia with her best friend Ann" | side view, two young girls, one with a hoodie, the other with a witch dress and wizard hat, hugging each other in front of a giant tree
-- "Buster and Scillia, both being sword specialists, spar a lot" | side view, young girl wearing a hoodie holding a sword fights a black anthropomorphic rabbit
+- ![Portrait of Scillia | front view, young girl wearing a hoodie holding a sword smiles at the camera, lush vegetation, ancient technology]()
+- ![Scilla is known for her actobatic stunts in combat | front view, young girl wearing a hoodie does a acrobatics while fighting in a mysterious japanese dojo, lush vegetation ancient technology]()
+- ![Much of Scillia's time is spent hunting for drops in the Great Filters | front view, young girl wearing a hoodie smiles at the camera, running through a dangerous mysterious forest, lush vegetation, ancient technology]()
+- ![Scillia likes creating strange concoctions to help in her drop hunts | young girl wearing a hoodie smiles at the camera, brewing a mysterious magical potion in the library]()
+- ![Scillia likes to stand on top of rooftops because it makes her look cool | back view, young girl wearing a hoodie standing on a solarpunk skyscraper, looking down on the city, lush vegetation, ancient technology]()
+- ![Scillia with her best friend Ann | side view, two young girls, one with a hoodie, the other with a witch dress and wizard hat, hugging each other in front of a giant tree]()
+- ![Buster and Scillia, both being sword specialists, spar a lot | side view, young girl wearing a hoodie holding a sword fights a black anthropomorphic rabbit]()
 ## Favorite Weapon:
 [Silsword](/items/Silsword)
 ## Abilities:
@@ -87,12 +87,12 @@ Chaotic Evil
 - "No one ever suspects the guy in the van."
 - "I'm already in."
 ## Image Gallery:
-- "Drake concept art" | front view, boy wearing combat gear holding two pistols with a serious expression, looking at the camera, cyberpunk city, lush vegetation
-- "Drake in his secret cave bunker" | front view, young hacker boy in a hoodie sitting at a computer in a dark room lit by computer screens
-- "Drake with his space destroyer, The Travesty" | front view, young boy in a combat gear with a pistol at his side, standing on top of a large spaceship with his arms crossed
-- "Drake's traps can be elaborate" | side view, young boy in a hoodie placing a laser tripwire in a dark alleyway)
-- "Drake in a firefight" | back view, boy wearing combat gear holding 2 pistols, fighting, magic storm in a solarpunk city, lush vegetation, ancient technology
-- "Drake's gun collection is massive" | boy in a hoodie in a dark mysterious high tech room full of guns and heavy weapons
+- ![Drake concept art | front view, boy wearing combat gear holding two pistols with a serious expression, looking at the camera, cyberpunk city, lush vegetation]()
+- ![Drake in his secret cave bunker | front view, young hacker boy in a hoodie sitting at a computer in a dark room lit by computer screens]()
+- ![Drake with his space destroyer, The Travesty | front view, young boy in a combat gear with a pistol at his side, standing on top of a large spaceship with his arms crossed]()
+- ![Drake's traps can be elaborate | side view, young boy in a hoodie placing a laser tripwire in a dark alleyway]()
+- ![Drake in a firefight | back view, boy wearing combat gear holding 2 pistols, fighting, magic storm in a solarpunk city, lush vegetation, ancient technology]()
+- ![Drake's gun collection is massive | boy in a hoodie in a dark mysterious high tech room full of guns and heavy weapons]()
 ## Favorite Weapon:
 [Final Roulette](/items/Final Roulette)
 ## Abilities:
@@ -147,11 +147,11 @@ Lawful Evil
 - "If [it](/lore/Black Link Coven) did exist, I wouldn't tell you!"
 - "The demons are cool with it."
 ## Image Gallery:
-- "Ann's Portrait" | front view, young girl with green hair in a wizard robe and hat school uniform holding a magic book book smiling at the camera
-- "Ann's reality-bending homespace is well-known" | back view, young witch in a robe and wizard hat looking at a mysterious dark labyrinth, ancient technology, lush vegetation
-- "Ann in wizard class" | witches and wizards in a japanese style modern classroom, lush vegetation, ancient technology
-- "Ann shopping for potion ingredients in the market" | front view, young witch wearing a robe and wizard hat school uniform holding a basket full of colorful potion ingredients shopping in the market
-- "Ann is a powerful mage and spellcaster" | young girl in a robe and wizard hat casting a powerful combat spell, explosion, lush vegetation, ancient technology
+- ![Ann's Portrait | front view, young girl with green hair in a wizard robe and hat school uniform holding a magic book book smiling at the camera]()
+- ![Ann's reality-bending homespace is well-known | back view, young witch in a robe and wizard hat looking at a mysterious dark labyrinth, ancient technology, lush vegetation]()
+- ![Ann in wizard class | witches and wizards in a japanese style modern classroom, lush vegetation, ancient technology]()
+- ![Ann shopping for potion ingredients in the market | front view, young witch wearing a robe and wizard hat school uniform holding a basket full of colorful potion ingredients shopping in the market]()
+- ![Ann is a powerful mage and spellcaster | young girl in a robe and wizard hat casting a powerful combat spell, explosion, lush vegetation, ancient technology]()
 ## Favorite Weapon:
 [Corpse Wand](/items/Corpse Wand)
 ## Abilities:
@@ -217,11 +217,11 @@ Favorite Weapon: [Levo Leash](/items/Levo Leash)
 - [Freeze Frame](/abilities/Freeze Frame)
 Limit Break: **Beast Bestie** For a short time, the closest pet gets a 10x boost to all stats.
 ## Image Gallery:
-- "Picture of Hyacinth" | front view, smiling young girl with long pink hair in a green dress with a floral pattern, holding a microphone, lush vegetation, ancient technology
-- "Hya is an excellent pet tamer and trainer" | young girl on stage, video game, lush vegetation, ancient technology
-- "Hya's show is very popular" | young girl on stage interview, game show, lush vegetation, ancient technology
-- "Hyacinth is good at riding mounts, especially flying ones" | young girl in a dress flying above the city on a horse dragon hybrid
-- "She is a foodie, and loves to review exotic foods" | young girl smiles with her tongue out, looking ad an exotic magical food, full body
+- ![Picture of Hyacinth | front view, smiling young girl with long pink hair in a green dress with a floral pattern, holding a microphone, lush vegetation, ancient technology]()
+- ![Hya is an excellent pet tamer and trainer | young girl on stage, video game, lush vegetation, ancient technology]()
+- ![Hya's show is very popular | young girl on stage interview, game show, lush vegetation, ancient technology]()
+- ![Hyacinth is good at riding mounts, especially flying ones | young girl in a dress flying above the city on a horse dragon hybrid]()
+- ![She is a foodie, and loves to review exotic foods | young girl smiles with her tongue out, looking ad an exotic magical food, full body]()
 ## Biography:
 Hyacinth is one of the most popular NPCs on [The Street](/lore/The Street), owing to her [Tuber](/lore/Tuber) show ["Hiya!"](/lore/Hiya). The show features Hyacinth following the adventures of [Scillia](/characters/Scillia Doge) and her friends on their quest up [The Street](/lore/The Street). The main features are interviews, food reviews, and adventure footage with her friends and pets.
 Although she is nice and outgoing, Hya is a polarizing figure, as she sometimes goes to extremes to get footage for her show.
@@ -281,11 +281,11 @@ ATK 42, DEF 93, VIT 45, SPR 5, DEX 12, LCK 25
 ## Limit Break:
 **Engine Overload** An AoE buff that doubles the stats of all allied characters, pets, and vehicles in its radius, but also increases damage received by 50%.
 ## Image Gallery:
-- "Photo of Juniper" | teenage girl wearing overalls, red hair ponytail, holding a pickaxe and video game controller, ancient dinosaur robot factory, lush vegetation
-- "Juniper is a proud tomboy and a nerd" | teenage girl in a VR headset and motion capture suit, holding a pickaxe and video game controller, high-tech lab, lush vegetation
-- "Juniper has won a lot of races with her custom built podracer" | teenage girl racing a podracer in the dangerous desert wasteland
-- "Juniper's workshop" | teenage girl wearing overalls repairs a giant mecha on a platform, ancient dinosaur robot factory
-- "Juniper is sometimes teaches engineering classes at The Citadel" | teenage girl wearing overalls and read hair ponytail teaches a modern style Japanese classroom
+- ![Photo of Juniper | teenage girl wearing overalls, red hair ponytail, holding a pickaxe and video game controller, ancient dinosaur robot factory, lush vegetation]()
+- ![Juniper is a proud tomboy and a nerd | teenage girl in a VR headset and motion capture suit, holding a pickaxe and video game controller, high-tech lab, lush vegetation]()
+- ![Juniper has won a lot of races with her custom built podracer | teenage girl racing a podracer in the dangerous desert wasteland]()
+- ![Juniper's workshop | teenage girl wearing overalls repairs a giant mecha on a platform, ancient dinosaur robot factory]()
+- ![Juniper is sometimes teaches engineering classes at The Citadel | teenage girl wearing overalls and read hair ponytail teaches a modern style Japanese classroom]()
 ## Biography:
 Juniper is originally from [Zone 10](/settings/Zone 10), but she moved to [Zone 0](/settings/Zone 0) to attend the prestigious [engineering academy](/settings/The Citadel).
 She is great at building everything from houses to vehicles to [mecha](/items/Mecha), which she uses to get around. Her most famous build is [Drake](/characters/Drake Silkbourne)'s ship, [The Travesty](/items/The Travesty], though because Drake is much better known than her, most people think it was Drake who built it.
@@ -327,11 +327,11 @@ True Neutral
 ## Stats:
 ATK 85, DEF 85, VIT 30, SPR 10, DEX 12, LCK 2
 ## Image Gallery:
-- "Portrait of Buster" | tall anthropomoprhic black rabbit holding two giant orange glowing swords)
-- "Buster and Scillia on an adventure" | young girl wearing a hoodie and a tall anthropomorphic black rabbit walking through a dark forest, holding a lantern)
-- "Buster using his Blow Cannon" | tall anthropomorphic black rabbit holding shooting a a shoulder mounted cannon)
-- "Buster has a fondness for small animals, especially birds" | tall anthropomorphic black rabbit in a field holding a little bird)
-- "Buster with his arms full of presents for Scillia" | tall anthropomorphic black rabbit with arms full of presents, including a stuffed dragon)
+- ![Portrait of Buster | tall anthropomoprhic black rabbit holding two giant orange glowing swords]()
+- ![Buster and Scillia on an adventure | young girl wearing a hoodie and a tall anthropomorphic black rabbit walking through a dark forest, holding a lantern]()
+- ![Buster using his Blow Cannon | tall anthropomorphic black rabbit holding shooting a a shoulder mounted cannon]()
+- ![Buster has a fondness for small animals, especially birds | tall anthropomorphic black rabbit in a field holding a little bird]()
+- ![Buster with his arms full of presents for Scillia | tall anthropomorphic black rabbit with arms full of presents, including a stuffed dragon]()
 ## Quotes:
 - "I gotchu like a Pikachu."
 - "I'm sorry, did you want this [rekt](/abilities/Rekt)?"
@@ -387,11 +387,11 @@ Lawful Good
 ## Stats:
 ATK 20, DEF 12, VIT 9, SPR 81, DEX 73, LCK 5
 ## Image Gallery:
-- "Portrait of Sayu" | front view, small girl with short green hair tied in pigtails, wearing cute animal backpack
-- "Sayu's first Drop was a [materia](/items/Materia) orb" | small girl with short green hair tied in pigtails, holding a glowing orb smiling
-- "Sayu and her [Gaia Dog](/lore/Gaia Dogs)" | small girl with short green hair tied in pigtails, giant scary mechanical robot dog, lush vegetation
-- "Sayu doesn't usually use a weapon, but on rare occasions she will use a bow" | small girl with short green hair tied in pigtails using a bow and arrow, surrounded by floating rocks
-- "Sayu's portable homespace is a [small wooden house](/lore/House)" | small girl with short green hair tied in pigtails, in front of a small japanese style house with a zen rock garden
+- ![Portrait of Sayu | front view, small girl with short green hair tied in pigtails, wearing cute animal backpack]()
+- ![Sayu's first Drop was a [materia](/items/Materia) orb | small girl with short green hair tied in pigtails, holding a glowing orb smiling]()
+- ![Sayu and her [Gaia Dog](/lore/Gaia Dogs) | small girl with short green hair tied in pigtails, giant scary mechanical robot dog, lush vegetation]()
+- ![Sayu doesn't usually use a weapon, but on rare occasions she will use a bow | small girl with short green hair tied in pigtails using a bow and arrow, surrounded by floating rocks]()
+- ![Sayu's portable homespace is a [small wooden house](/lore/House) | small girl with short green hair tied in pigtails, in front of a small japanese style house with a zen rock garden]()
 ## Quotes:
 - "Ooh, a shiny!"
 - "I'm not lost, I'm exploring!"
@@ -446,11 +446,11 @@ Chaotic Neutral
 ## Stats:
 ATK 10, DEF 10, VIT 40, SPR 40, DEX 100, LCK 20
 ## Image Gallery:
-- "Kazu's in-game portrait" | Boy with black-green-purple hair, wearing a punk outfit
-- "Kazu playing games at the Aki Mall" | boy with black-green-purple hair, high tech Japanese mall playing video games with friends
-- "Silk Worms are Kazu's favorite food" | boy with black-green-purple hair, eating a bowl of worms
-- "Kazu's aura is very distinct, even for Neural Dancers" | boy with wavy black-green-purple hair, surrounded by a magical Saiyan aura
-- "Kazu's bedroom is full of games and posters" | bedroom with video games and posters on the walls
+- ![Kazu's in-game portrait | Boy with black-green-purple hair, wearing a punk outfit]()
+- ![Kazu playing games at the Aki Mall | boy with black-green-purple hair, high tech Japanese mall playing video games with friends]()
+- ![Silk Worms are Kazu's favorite food | boy with black-green-purple hair, eating a bowl of worms]()
+- ![Kazu's aura is very distinct, even for Neural Dancers | boy with wavy black-green-purple hair, surrounded by a magical Saiyan aura]()
+- ![Kazu's bedroom is full of games and posters | bedroom with video games and posters on the walls]()
 Quotes:
 - "Come on, just one more game!"
 - "Yo have you even heard the slap?"
@@ -517,11 +517,11 @@ ATK 35, DEF 75, VIT 20, SPR 20, DEX 100, LCK 35
 - "The best things in life are free, unless you're a Drop Courier."
 - "Unfortunately, it's not on the way."
 ## Image Gallery:
-- "Terra's Drop Courier license photo" | a young girl with long black hair and brown eyes, wearing an orange courier outfit, happy cyberpunk street hoverboard
-- "Terra running through the Great Filter" | young girl with long black hair wearing an orange jumpsuit, running through a dangerous mysterious landscape, lush vegetation, ancient technology
-- "Terra's homespace" | a small room with a futon, a bookcase, and a stack of digital packages
-- "When she gets in trouble, Terra summons her mech" | young girl with black hair in an orange courier outfit, with a large blue scarf, standing next to a large robot
-- "Terra with her mother" | teenage girl with black hair in an orange courier outfit, with her mother in a cyberpunk office
+- ![Terra's Drop Courier license photo | a young girl with long black hair and brown eyes, wearing an orange courier outfit, happy cyberpunk street hoverboard]()
+- ![Terra running through the Great Filter | young girl with long black hair wearing an orange jumpsuit, running through a dangerous mysterious landscape, lush vegetation, ancient technology]()
+- ![Terra's homespace | a small room with a futon, a bookcase, and a stack of digital packages]()
+- ![When she gets in trouble, Terra summons her mech | young girl with black hair in an orange courier outfit, with a large blue scarf, standing next to a large robot]()
+- ![Terra with her mother | teenage girl with black hair in an orange courier outfit, with her mother in a cyberpunk office]()
 ## Favorite Weapon:
 [Sonic Screwdriver](/items/Sonic Screwdriver)
 ## Abilities: 

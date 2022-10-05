@@ -14,9 +14,9 @@ Most Zones on the street have a [School or Academy](/lore/Schools) that is respo
 - **Material** Various, depending on Zone
 - **Destructible** No, but can be hidden
 ## Image Gallery:
-- "The Street is often depicted with a digital fractal pattern from Zone 0" | anime girl walking her dog down the solarpunk street
-- "The center of each Zone usually contains a School" | tall white citadel in a solarpunk city, lush vegetation
-- "The Street is cut off by a Great Wall" | back view, anime girl looks up at a giant brutalist wall on the digital solarpunk street, skyscraper, lush vegetation, ancient technology
-- "It's relatively safe to build on the street" | anime boy builds a Fortnite like structure with his phone on the solarpunk street landscape, lush vegetation, ancient technology
-- "When Mobs get loose on the Street, it's the job of the local school military to deal with them" | fighting an anime style monster on the digital solarpunk street, lush vegetation
-- "The Street is the center of transportation in the world" | anime character rides a hoverboard on the digital street, skyscraper, ancient technology, lush vegetation
+- ![The Street is often depicted with a digital fractal pattern from Zone 0 | anime girl walking her dog down the solarpunk street]()
+- ![The center of each Zone usually contains a School | tall white citadel in a solarpunk city, lush vegetation]()
+- ![The Street is cut off by a Great Wall | back view, anime girl looks up at a giant brutalist wall on the digital solarpunk street, skyscraper, lush vegetation, ancient technology]()
+- ![It's relatively safe to build on the street | anime boy builds a Fortnite like structure with his phone on the solarpunk street landscape, lush vegetation, ancient technology]()
+- ![When Mobs get loose on the Street, it's the job of the local school military to deal with them | fighting an anime style monster on the digital solarpunk street, lush vegetation]()
+- ![The Street is the center of transportation in the world | anime character rides a hoverboard on the digital street, skyscraper, ancient technology, lush vegetation]()
