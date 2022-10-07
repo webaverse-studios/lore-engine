@@ -425,9 +425,7 @@ ${commentLore}
 prompt: ${name}
 response:`;
 };
-export const makeCommentStop = () => {
-  return `\n\n`;
-};
+export const makeCommentStop = () => [`"`, "\n"];
 export const parseCommentResponse = response => response.replace(/^ /, '');
 
 
