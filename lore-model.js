@@ -2355,3 +2355,88 @@ export async function generateRPGDialogue(
     await generateFn(makeRPGDialoguePrompt(input), makeRPGDialogueStop())
   );
 }
+
+// EXPOSITION
+
+export const makeExpositionPrompt = ({
+  name,
+  location = null,
+  type = "Object",
+}) => {
+  return `\
+Detailed and descriptive exposition on locations, objects and characters from a futuristic sci-fi video game called Upstreet.
+${
+  (type !== "location" &&
+    location &&
+    "Location: " + location.name + "\nQuote: " + location.description + "\n") ||
+  ""
+}\
+Object: "The Great Deku Tree" An enormous, grey, old tree. It is partly petrified.
+Quote: "It's just an old tree. It's the kind of tree that makes me want to carve out an old mans face in it."
+Character: "Kitten" A small black kitten with big green eyes.
+Quote: "You're such a cute little kitty. Is it time for your nap?"',
+Object: "rainbow-dash.gif" Animaged gif image of Rainbow Dash from My Little Pony, in the style of Nyan Cat.
+Quote: "It's pretty good art, I guess. But I wish it had something more interesting besides this rainbow."
+Object: "The Infinity Sword" An ancient sword planted in a stone. It is heavily overgrown and won't budge.
+Quote: "This sword looks like it's been here for eons. It's hard to see where the stone ends and the sword begins."
+Location: "The Woods" A gloomy forest where sunlight seems to disappear.
+Quote: "It's so dark in there! I like it. It feels spooky and dangerous. Maybe there are monsters. And I can kill them all."
+Object: "Rustic House" A regular townhouse in the country.
+Character: "Aerith Gainsborough" A flower girl with long brown hair. She's wearing a pink dress and has a big smile on her face.
+Quote: "Can I buy a flower? Or are they not for sale?"',
+Location: "The Trash" The dump where trash from all over the metaverse is kept. The Trash is dangerous and crime ridden, but home to many who are desperate.
+Quote: "Ugh, the dregs of society live here. It's the worst. It's just a disgusting slum. I'm honestly surprised there's not more crime."
+Character: "Purple Cube" A purple cube with a single blue eye.
+Quote: "Hello. You're weird. What are you supposed to be?"',
+Location: "Lost Minds Nightclub" One of the hippest nightclubs in the verse. Most who end up here don't remember how they arrived.
+Quote: "You won't lose your mind here, but if you lose your mind that's where you'll end up. Then you get to party until your parents come pick you up."
+Location: "Fennek's Forest" A forest full of fenneks. Mostly harmless.
+Quote: "There's a lot of fenneks in this forest. Weird that they all hang out together like that. But I guess it's better than being eaten by a lion or something."
+Location: "Freaky Funkos Fried Fox" One of the more bizarre restaurants around.
+Quote: "I'm not sure how I feel about foxes being eaten. On the one hand, they're cute. But on the other hand, they're a little too foxy."
+Object: "Tree" A basic tree in the park.
+Quote: "This tree is important. I hang out here all the time and that makes it important to me."
+Location: "Dragon's Lair" An ancient cavern that has been inhabited by generations of dragons.
+Quote: "It's very moisty and hot in here, something smells really fishy. I'm not sure what it is, but I'm sure it's not a dragon."
+Location: "Sunscraper" The tallest building ever conceived of.
+Quote: "I bet it's amazing to see the world from up there. I guess as long as you don't fall down. I'm not scared though!"
+Character: "Ghost Girl" A rotten girl in a nightgown, like from The Ring.
+Quote: "Hello ghost girl how are you? How's death treatingm you?"',
+Object: "The Stacks Warehouse" A cyberpunk container in a trailer park. It is inspired by the house of Hiro Protagonist in Snow Crash
+Quote: "This thing is all rusted and decrepit. They should probably tear it down and get a new place."
+Character: "Green Dragon" A chubby dragon with short wings. It is a very cartoony avatar.
+Quote: "You look like you're having fun. Do those wings let you fly?"',
+Object: "The Enchiridion" A magical spellbook with very old pages. It is fragile.
+Quote: "This book has ancient written all over it. Well not really but you know what I mean."
+${capitalizeFirstLetter(type)}: "${name}"`;
+};
+
+export const makeExpositionStop = (type) => [
+  `${capitalizeFirstLetter(type)}:`,
+  "\n\n",
+];
+
+export const parseExpositionResponse = (resp) => {
+  const lines = resp.split("\n").filter((el) => {
+    return el !== "";
+  });
+
+  const description = lines[0].trim();
+  const comment =
+    lines[1] && lines[1].replaceAll("Quote: ", "").replaceAll('"', "").trim();
+
+  return {
+    description,
+    comment,
+  };
+};
+
+export async function generateExposition(
+  { name, location = null, type = "Object" },
+  generateFn
+) {
+  const input = { name, location, type };
+  return parseExpositionResponse(
+    await generateFn(makeExpositionPrompt(input), makeExpositionStop(type))
+  );
+}
