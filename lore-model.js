@@ -1206,3 +1206,158 @@ export async function generateQuest(
     await generateFn(makeQuestPrompt(input), makeQuestStop(), false),
   );
 }
+
+
+
+const questCheckerExamples = `#It defines if a chat can give a quest to the user, there are only 2 answers, yes and no
+{user1}: One should never put anything in their mouth that they wouldn't want to eat.
+{user2}: I don't know about that, I'm pretty adventurous when it comes to food. 
+{user1}: To each their own, I guess. 
+Quest: no
+{user1}: {user2}, what are you up to today?
+{user2}: I'm going to the {location}. {user2} come with? 
+{user1}: What do you want to do first when we get there? 
+Quest: yes
+{user1}: Why did you give me a C on my potion?! It was perfect!
+{user2}: Your potion exploded when you tried to stir it, you could have hurt yourself. 
+{user1}: But I followed the recipe to the letter! 
+{user2}: I hope so, for your sake.
+Quest: yes
+{user1}: This is just a bunch of letters and numbers. I have no idea what it means.
+Quest: no
+{user1}: {user2}, can I borrow a potion? I need to get some sleep.
+{user2}: No, I don't have any potions. And even if I did, I'm not sure if I would give you one. You always make such a mess when you use them. 
+{user2}: No, I don't believe you.  
+Quest: yes
+{user1}:  {user2}, can I borrow a hair from your head? I'm making a potion that requires it.
+{user2}: No, I don't want to give you a hair from my head. That's gross. 
+{user1}: Fine, I'll just find someone else to ask then.  
+Quest: yes
+{user1}: {user2}, what are you up to today?
+{user2}: I'm going to the movies with my friends. 
+{user2}: I will!  
+Quest: no
+{user1}: Why hello there! Would you like to buy one of my potions?
+{user2}: What does this potion do? 
+{user1}: Would you like to buy one?  
+{user2}: No, I don't think so. 
+Quest: no
+{user1}: What are you up to?
+{user2}: I'm going for an adventure at the {location}, do you want to come with?
+{user1}: Yes
+Quest: yes
+{user1}: What are you up to?
+{user2}: I'm going for an adventure at the {location}, do you want to come with?
+{user1}: No
+Quest: no
+  
+{user1}: Trying out my new potion. It will make you feel like you're floating on a cloud!
+{user2}: I don't know, it looks kind of weird. What if it doesn't work? 
+{user2}: Okay, I'll try it.  
+Quest: no
+{user1}: Hey {user2}, how are you?
+{user2}: I'm good, could you help me with something?
+{user1}: No
+{user2}: Alright
+Quest: no
+{user1}: Hey {user2}, how are you?
+{user2}: I'm good, could you help me with something?
+{user1}: Sure
+{user2}: I need help to find the ingredients for my potion
+Quest: yes
+{user1}: Hey {user2}, how are you?
+{user2}: I'm good, could you help me with something?
+{user1}: Yes
+{user2}: I need help to find the ingredients for my potion
+Quest: yes
+{user1}: What are you doing there {user2}?
+{user2}: Doing my research for the expedition
+{user1}: Can i help you with it?
+Quest: yes
+{user1}: Hey Ann, what are you up to?
+{user2}: I'm just hanging out, what about you?
+{user2}: Do you want to hang out together?
+{user1}: Yes
+{user2}: Great, let's go!
+Quest: yes
+{user1}: Hey Ann, what are you up to?
+{user2}: I'm just hanging out, what about you?
+{user2}: Do you want to hang out together?
+{user1}: No
+{user2}: Alright, maybe another time!
+Quest: no
+{user1}: What are you working on now Ann? A potion to turn your teacher into a toad?
+{user2}: Yes, and it's almost ready. Would you like to see?
+{user1}: That's a really impressive potion.
+{user2}: Thank you, I'm really proud of it.
+{user1}: Can I help you testing it?
+{user2}: Sure, I could use an extra set of hands.
+Quest: yes
+{user1}: Quit being such a nerd and let's make some mischief!
+{user2}: I don't want to get in trouble.
+{user1}: It'll be fun, I promise.
+{user2}: Okay, but if we get caught it's your fault.
+{user2}: Let's go!
+Quest: yes
+{user1}: What are you working on in your cauldron today {user2}?
+{user2}: I'm trying out a new potion recipe.
+{user2}: Do you want to help me test it?
+{user1}: Sure, I love helping with potions!
+{user1}: What do I need to do?
+{user1}: Poke that frog for me.
+{user2}: Are you sure? It looks kind of poisonous.
+{user1}: I'm positive, I can handle it.
+{user2}: Okay, but don't say I didn't warn you.
+{user2}: Poke the frog with this stick.
+{user1}: Poke the frog with the stick.
+{user1}: I did it!
+{user1}: What happened?
+{user2}: Well, the frog turned into a prince.
+{user1}: That's amazing!
+{user2}: I know, right? potion-making is so much fun.
+Quest: yes
+{user1}: What are you working on in your cauldron today {user2}?
+{user2}: I'm trying out a new potion recipe.
+{user2}: Do you want to help me test it?
+{user1}: I'm busy now
+{user2}: Alright
+Quest: no
+{user2}: I need your help.
+{user1}: What is wrong?
+{user2}: Time is of essence! Can you trust me?
+{user1}: Follow me
+{user1}: What's up {user2}?
+{user2}: I'm looking for people for an expedition
+{user1}: Where to?
+{user2}: To the {location}
+Quest: yes
+{user1}: Do you have a recipe for a love potion? I really need one.
+{user2}: A love potion? No, I don't have a recipe for one of those.
+{user1}: Oh, okay. Thanks anyway.
+{user2}: But I can help you invent one.
+Quest: yes
+{user1}: Hey, do you want to buy a love potion? It worked on my teacher and got me an A.
+{user2}: No, love potions are illegal.
+{user1}: Come on, it's just a little potion. What's the harm?
+{user2}: No, I don't want to get in trouble.
+{user2}: I don't want to get in trouble.
+{user1}: Okay, I won't force you.
+{user2}: Thanks.
+Quest: no`;
+
+export const makeQuestCheckerPrompt = (
+  location,
+  conversation,
+  user1,
+  user2,
+) => {
+  return `${questCheckerExamples
+    .replaceAll('{location}', location)
+    .replaceAll('{user1}', user1)
+    .replaceAll('{user2}', user2)}
+  
+${conversation}Quest:`;
+};
+export const makeQuestCheckerStop = () => {
+  return ['\n'];
+};
