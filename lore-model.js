@@ -2056,3 +2056,302 @@ export async function generateBanter(
   );
 }
 
+// CUTSCENES
+
+export const makeCutscenePrompt = ({
+  location = null,
+  characters = [],
+  objects = [],
+  messages = [],
+}) => {
+  return `\
+# Objects
+"Sword of Gothika" A rare and legendary sword.
+(TASK) Using the Sword of Gothika as context, write a video game cutscene conversation between the Jade64, Eris22 and Maxx, who are players in an MMORPG. Add *END* at the end of the sentence when a character no longer wants to engage in banter.
+# Transcript
+>> Jade64: Alright Maxx. I've come for the sword.
+>> Maxx: You really think you have what it takes to wield the legendary Sword of Gothika?
+>> Jade64: No. But my friend Eris does!
+>> Eris22: That's right Maxx. I'm here to claim the sword and power level my little bro.
+>> Maxx: How cute. now prepare to die! *END*
+"""
+# Objects
+"Computer" A very old computer. A real piece of crap, but I guess it works..
+# Characters
+"Eric" A very boring guy. Bored the pants off a thousand people at once, once.
+"Millie" A very interesting person. She is a bit of a mystery.
+(TASK) Using Computer as context, write a short cutscene between the Eric and Millie, who are players in an MMORPG. Add *END* at the end of the sentence when the cutscene is over.
+# Transcript 
+>> Millie: Hey Eric, can I ask you something?
+>> Eric: Sure, what is it?
+>> Millie: Do you ever wonder why we are here?
+>> Eric: Is that a way to tee up a convo about the drop tomorrow?
+>> Millie: It might not be!
+>> Eric: Millie, I am tending to serious business. The org needs me to break through this firewall by tonight. Leave me alone. *END*
+"""
+${location && `# Location\n"${location.name}" ${location.description}`}
+${objects.length > 0 && "# Nearby Objects\n"}\
+${
+  objects
+    .slice(0, 2)
+    .map((c) => `"${c.name}" ${c.bio}`)
+    .join("\n\n") + (objects.length > 0 && "\n")
+}\
+${characters.length > 0 && "# Characters\n"}\
+${
+  characters.map((c) => `"${c.name}" ${c.bio}`).join("\n\n") +
+  (characters.length > 0 && "\n\n")
+}
+(TASK) Using ${
+    objects && objects.length > 0 && objects.map((o) => o.name).join(", ")
+  } ${
+    location && "and " + location.name
+  } as context, write a video game RPG cutscene between the characters.
+# Transcript
+${
+  messages
+    ? messages.map((m) => ">> " + m?.name + ": " + m?.message).join("\n") +
+      (messages.length > 0 ? "\n" : "") +
+      ">>"
+    : ">>"
+}`;
+};
+
+export const makeCutsceneStop = () => ["\n\n", "done=true", "done = true"];
+
+export const parseCutsceneResponse = (resp) => {
+  const messages = [];
+
+  resp = resp
+    .trim()
+    .trimStart()
+    .replace(/^\n+/, "") // remove leading newlines
+    .replace(/\n+$/, "") // remove trailing newlines
+    .replaceAll('"', "") // remove quotes
+    .replaceAll("\t", "") // remove tabs
+    .split("\n");
+
+  const responseArray = [...resp];
+  while (responseArray.length > 0) {
+    try {
+      const fullMessage = responseArray
+        .shift()
+        .replaceAll(">>", "")
+        .replaceAll(">", "")
+        .trim();
+      // if fullMessage contains a '<' or https, continue
+      if (fullMessage.includes("<") || fullMessage.includes("https")) {
+        continue;
+      }
+      const splitMessage = fullMessage.split(":");
+      if (splitMessage.length !== 2) {
+        console.log("invalid message format");
+        continue;
+      }
+
+      // split name by spaces and get the last one
+      const name = splitMessage[0].trim().split(" ").pop();
+      const message = splitMessage[1].trim();
+      if (name && messages)
+        messages.push({ name, message, done: message.includes("*END*") });
+
+      // check for *END*
+      if (message.includes("*END*")) {
+        break;
+      }
+    } catch (error) {
+      console.warn("Could not format message", error);
+    }
+  }
+
+  return messages;
+};
+
+export async function generateCutscene(
+  {
+    location = null,
+    characters = [],
+    objects = [],
+    messages = [],
+    dstCharacter = null,
+  },
+  generateFn
+) {
+  const input = { location, characters, objects, messages, dstCharacter };
+  return parseCutsceneResponse(
+    await generateFn(makeCutscenePrompt(input), makeCutsceneStop())
+  );
+}
+
+// RPG DIALOGUE
+
+export const makeRPGDialoguePrompt = ({
+  dstCharacter,
+  characters,
+  location = null,
+  objects = [],
+  messages = [],
+}) => {
+  console.log("messages are");
+  console.log(messages);
+  return `\
+# Transcript 
+>> Alyx: Just the person I needed. You busy?
+>> (OPTIONS): [Yes I am, sorry!] [I've always got time for you!]
+"""
+# Transcript
+>> Drake: I can pay you tomorrow!
+>> Shopkeeper: Come back when you have money! *END*
+"""
+# Transcript
+>> Guard: You can't pass.
+>> Drake: Come on. What's the price?
+>> Guard: No price. Don't try asking again. This me me being nice. *END*
+"""
+# Transcript
+>> Korben: I've always got time for you, Alyx!
+>> Alyx: Great! Do you ever wonder why we are here?
+>> (OPTIONS): [Yes] [No] [Is that a way to tee up a convo about the drop tomorrow?]
+"""
+# Transcript
+>> Korben: Is that a way to tee up a convo about the drop tomorrow?
+>> Alyx: In a roundabout way, yes. Listen, if I ask you for a favor, but you can't ask what it's for, will you do it?
+>> (OPTIONS): [Yes, I trust you] [No, I'm not comfortable with that]
+"""
+>> Korben: Yes, I trust you.
+>> Alyx: Great. That's all I needed to know right now. *END*
+"""
+# Objects
+"Sword of Gothika" A rare and legendary sword.
+# Characters
+"Jade64" A human adventurer. Kind of a noob but thinks he has mad skills.
+"Eris22" Pro player, power leveler for hire. She's a bit of a jerk-- unless you're paying her.
+"Maxx" Orc Berserker. Badass NPC Boss, every hunter has to kill him at least once.
+(TASK) Using the Sword of Gothika as context, write a fun RPG conversation between the Jade64, Eris22 and Maxx, who are players in an MMORPG. The dialogue should be 2-8 (>2 and < 8) lines. Add *END* when the dialog is over.
+# Transcript
+>> Jade64: Alright Maxx. I've come for the sword.
+>> Maxx: You really think you have what it takes to wield the legendary Sword of Gothika?
+>> (OPTIONS): [Yes] [No. But my friend Eris does!]
+>> Jade64: No. But my friend Eris does!
+>> Eris22: That's right Maxx. I'm here to claim the sword and power level my little bro.
+>> Maxx: How cute. now prepare to die! *END*
+"""
+# Characters
+"Zaphod" Conceited ass. President of the world.
+"Trillian" Supergenius and last human woman from Earth still living.
+(TASK) Write a short RPG style dialogue conversation between the Zaphod and Trillian. The dialogue should be 2-8 (>2 and < 8) lines. Add *END* at the end when the dialog is over. Add *END* when the dialog is over.
+# Transcript
+>> Zaphod: Hey Tril, love that new outfit.
+>> Trillian: Nope. No time for your shenanigans. Out of my face! *END*
+"""
+# Characters
+"Eric" Hacker. Gunner. Good with anything that has a keyboard or a trigger.
+"Millie" She is a bit of a mystery. Works for the org, but no one knows what she does.
+# Transcript
+>> Eric: For real?
+>> Millie: Yeah.
+>> Eric: You're just going to leave me hanging?
+>> Millie: Yep. Gotta run. Bye! *END*
+"""
+${location && `# Location\n"${location.name}" ${location.description}`}
+${objects.length > 0 && "# Nearby Objects\n"}\
+${
+  objects
+    .slice(0, 2)
+    .map((c) => `"${c.name}" ${c.bio}`)
+    .join("\n\n") + (objects.length > 0 && "\n")
+}\
+${characters.length > 0 && "# Characters\n"}\
+${
+  characters.map((c) => `"${c.name}" ${c.bio}`).join("\n\n") +
+  (characters.length > 0 && "\n")
+}
+# Target Character
+"${dstCharacter.name}" ${dstCharacter.bio}
+(TASK) Using ${
+    objects && objects.length > 0 && objects.map((o) => o.name).join(", ")
+  }${location ? " and " + location.name : ""}\
+ as context, write a video game RPG cutscene between the characters${
+   dstCharacter && " and " + dstCharacter.name
+ }.
+# Transcript
+${
+  messages
+    .map((m) =>
+      ">> " + m.type === "options"
+        ? "(OPTIONS): " + m.options.map((o) => `[${o}]`).join(" ")
+        : m.name + ": " + m.message
+    )
+    .join("\n") +
+  (messages.length > 0 ? "\n" : "") +
+  ">>"
+}`;
+};
+
+export const makeRPGDialogueStop = () => ["END*"];
+
+export const parseRPGDialogueResponse = (resp) => {
+  // first, split by line, and remove ">> ", then remove any > or <
+  // filter out any line after the first that doesn't start with a >>
+  console.log("resp is", resp);
+  resp = resp.split("\n");
+  const lines = [...resp];
+  // for each line, process as a message and add to the returned messages
+  const messages = [];
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    const split = line.split(":");
+    if (split.length < 2) {
+      continue;
+    }
+
+    if (split[0].length > 30 || split[1].length > 200) {
+      continue;
+    }
+
+    // if split[0] doesn't start with a >, then continue
+    if (split[0].includes("#") || split[1].includes(">>")) {
+      continue;
+    }
+
+    split[0] = split[0].replaceAll(">", "").trim();
+
+    const name = split[0].trim();
+    const message = split[1].trim();
+    // set end to true if any of the last 5 characters in line is a *
+    const end = line.includes("*");
+    if (name.includes("OPTIONS")) {
+      const type = "options";
+      // split the message into an array of options, which are plaintext between []
+      // example: [that doesn't bother you?] [It's the bite I'm worried about]
+      const options = message
+        .split("[")
+        .map((o) => o.split("]")[0].trim())
+        .filter((o) => o.length > 0);
+      console.log("options are", options);
+      messages.push({ type, options, end });
+      break;
+    } else {
+      const type = "message";
+      messages.push({ type, name, message: message.split("*")[0].trim(), end });
+      if (end) break;
+    }
+  }
+  return messages;
+};
+
+export async function generateRPGDialogue(
+  {
+    location = null,
+    characters = [],
+    objects = [],
+    messages = [],
+    dstCharacter = null,
+  },
+  generateFn
+) {
+  const input = { location, characters, objects, messages, dstCharacter };
+  return parseRPGDialogueResponse(
+    await generateFn(makeRPGDialoguePrompt(input), makeRPGDialogueStop())
+  );
+}
