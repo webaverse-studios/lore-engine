@@ -1933,3 +1933,126 @@ ${
 
   return loreFileOutput;
 }
+
+// BANTER
+
+export const makeBanterPrompt = ({
+  location = null,
+  characters = [],
+  objects = [],
+  messages = [],
+}) => {
+  return `\
+# Objects
+"Sword of Gothika" A rare and legendary sword.
+(TASK) Using the Sword of Gothika as context, write some light banter between the Jade64, Eris22 and Maxx, who are players in an MMORPG. Add *END* when a character no longer wants to engage in banter.
+# Transcript
+>> Jade64: Anyone wanna buy a legendary SoG?
+>> Eris22: SoG? What's that?
+>> Maxx: Sword of Gothika, very dank.
+>> Eris22: Ohhhhh sick, how much?
+>> Jade64: 6 shards or 50k SILK
+>> Eris: Errr yeah, I have like 4k SILK. *END*
+"""
+# Objects
+"Computer" A very old computer. A real piece of crap, but I guess it works..
+# Characters
+"Eric" A very boring guy. Bored the pants off a thousand people at once, once.
+"Millie" A very interesting person. She is a bit of a mystery.
+(TASK) Using Computer as context, write a transcript of light banter between the Eric and Millie, who are players in an MMORPG. Add *END* at the end of the sentence when a character no longer wants to engage in banter.
+# Transcript 
+>> Millie: Hey Eric, can I ask you something?
+>> Eric: Sure, what is it?
+>> Millie: Do you ever wonder why we are here?
+>> Eric: Is that a way to tee up a convo about the drop tomorrow?
+>> Millie: It might not be!
+>> Eric: Millie, I am tending to serious business. The org needs me to break through this firewall by tonight. Leave me alone. *END*
+"""
+${location && `# Location\n"${location.name}" ${location.description}`}
+${objects.length > 0 && "# Objects\n\n"}\
+${
+  objects
+    .slice(0, 2)
+    .map((c) => `"${c.name}" ${c.bio}`)
+    .join("\n\n") + (objects.length > 0 && "\n")
+}\
+${characters.length > 0 && "# Characters\n"}\
+${
+  characters.map((c) => `"${c.name}" ${c.bio}`).join("\n") +
+  (characters.length > 0 && "\n")
+}\
+(TASK) Using ${
+    objects && objects.length > 0 && objects.map((o) => o.name).join(", ")
+  } ${
+    location && "and " + location.name
+  } as context, write a transcript of light banter between the characters.
+# Transcript
+${
+  messages
+    ? messages.map((m) => ">> " + m.name + ": " + m.message).join("\n") +
+      (messages.length > 0 ? "\n" : "") +
+      ">>"
+    : ">>"
+}`;
+};
+
+export const makeBanterStop = () => ["\n\n", "done=true", "done = true"];
+
+export const parseBanterResponse = (resp) => {
+  const messages = [];
+
+  resp = resp
+    .trim()
+    .trimStart()
+    .replace(/^\n+/, "") // remove leading newlines
+    .replace(/\n+$/, "") // remove trailing newlines
+    .replaceAll('"', "") // remove quotes
+    .replaceAll("\t", "") // remove tabs
+    .split("\n");
+
+  const responseArray = [...resp];
+  while (responseArray.length > 0) {
+    try {
+      const fullMessage = responseArray
+        .shift()
+        .replaceAll(">>", "")
+        .replaceAll(">", "")
+        .trim();
+      // if fullMessage contains a '<' or https, continue
+      if (fullMessage.includes("<") || fullMessage.includes("https")) {
+        continue;
+      }
+      const splitMessage = fullMessage.split(":");
+      if (splitMessage.length !== 2) {
+        console.log("invalid message format");
+        continue;
+      }
+
+      // split name by spaces and get the last one
+      const name = splitMessage[0].trim().split(" ").pop();
+      const message = splitMessage[1].trim();
+      if (name && messages)
+        messages.push({ name, message, done: message.includes("*END*") });
+
+      // check for *END*
+      if (message.includes("*END*")) {
+        break;
+      }
+    } catch (error) {
+      console.warn("Could not format message", error);
+    }
+  }
+
+  return messages;
+};
+
+export async function generateBanter(
+  { location = null, characters = [], objects = [], messages = [] },
+  generateFn
+) {
+  const input = { location, characters, objects, messages };
+  return parseBanterResponse(
+    await generateFn(makeBanterPrompt(input), makeBanterStop())
+  );
+}
+
