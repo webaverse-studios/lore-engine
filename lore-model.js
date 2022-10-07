@@ -5,6 +5,10 @@ export const defaultPlayerBio = 'A new player. Not much is known about them.';
 export const defaultObjectName = 'Thing';
 export const defaultObjectDescription = 'A thing. Not much is known about it.';
 
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 // fairly shuffle the array
 const shuffleArray = array => {
   for (let i = array.length - 1; i > 0; i--) {
