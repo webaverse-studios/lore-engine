@@ -1108,3 +1108,101 @@ export const parseCharacterIntroResponse = response => {
     return null;
   }
 };
+
+// QUESTS
+
+export const makeQuestPrompt = ({conversation, location, user1, user2}) => {
+  return `\
+# Conversation
+{user2}: Excuse me, {user1}. I'm in need of your assistance.
+{user1}: Yes?
+{user2}: Justice demands retribution! In this case it requires death!
+{user1}: What do you need?
+Quest: Slay the mummy army inside the Ancient Tombs|Reward 2000xp
+# Conversation
+{user2}: Please, lend me your hand.
+{user1}: What for?
+{user2}: The other day I caught a huge fish. It was enormous! And by enormous I mean it was the biggest fish I've ever seen, it was probably the biggest fish anybody has ever and will ever see. Unfortunately, after I managed to catch it, the fish got away. It took my fishing rod with it and I really need it back. I'd go and get it myself, but it's underwater and I'm pretty sure that fish has a vendetta against me now. Would you mind getting it for me?
+{user1}: Sure
+Quest: Go to the ocean to catch the fish, surviving the horrors there|Reward: 50000xp
+# Conversation
+{user2}: I need your help.
+{user1}: What is wrong?
+{user2}: Time is of essence! Can you trust me?
+{user1}: Follow me
+{user1}: What's up {user2}?
+{user2}: I'm looking for people for an expedition
+{user1}: Where to?
+{user2}: To the North Pole
+Quest: Survive a day at the North Pole, without getting lost|Reward: 7000xp
+# Conversation
+{user1}: What are you working on in your cauldron today {user2}?
+{user2}: I'm trying out a new potion recipe.
+{user2}: Do you want to help me test it?
+{user1}: Sure, I love helping with potions!
+{user1}: What do I need to do?
+{user1}: Poke that frog for me.
+{user2}: Are you sure? It looks kind of poisonous.
+{user1}: I'm positive, I can handle it.
+{user2}: Okay, but don't say I didn't warn you.
+{user2}: Poke the frog with this stick.
+{user1}: Poke the frog with the stick.
+{user1}: I did it!
+{user1}: What happened?
+{user2}: Well, the frog turned into a prince.
+{user1}: That's amazing!
+{user2}: I know, right? potion-making is so much fun.
+Quest: Create a unique potion to impress {user2}|Reward: 5000xp
+# Conversation
+{user1}: Hey {user2}, how are you?
+{user2}: I'm good, could you help me with something?
+{user1}: Yes
+{user2}: I need help to find the ingredients for my potion
+Quest:  Gather Durian fruits from the Dark Forest|Reward: 100xp
+# Conversation
+{user1}: What are you working on now {user1}? A potion to turn your teacher into a toad?
+{user2}: Yes, and it's almost ready. Would you like to see?
+{user1}: That's a really impressive potion.
+{user2}: Thank you, I'm really proud of it.
+{user1}: Can I help you testing it?
+{user2}: Sure, I could use an extra set of hands.
+Quest: Find a cursed toad body from inside Hellhole|Reward: 2000xp
+# Conversation
+{user1}: Quit being such a nerd and let's make some mischief!
+{user2}: I don't want to get in trouble.
+{user1}: It'll be fun, I promise.
+{user2}: Okay, but if we get caught it's your fault.
+{user2}: Let's go!
+Quest: Curse another NPC|Reward: 400xp
+# Conversation:
+${conversation
+  .replaceAll('{location}', location)
+  .replaceAll('{user1}', user1)
+  .replaceAll('{user2}', user2)}
+Quest:`;
+};
+
+export const makeQuestStop = () => ['\n'];
+
+export const parseQuestResponse = resp => {
+  const [quest, reward] = resp.trim().split('|');
+  return {
+    quest: quest?.trim(),
+    reward: reward?.trim(),
+  };
+};
+
+export async function generateQuest(
+  {conversation, location, user1, user2},
+  generateFn,
+) {
+  const input = {
+    conversation,
+    location,
+    user1,
+    user2,
+  };
+  return parseQuestResponse(
+    await generateFn(makeQuestPrompt(input), makeQuestStop(), false),
+  );
+}
